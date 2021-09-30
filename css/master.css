@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2e3134;
+}
+#nav {
+  padding: 30px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+}
+#nav a {
+  font-weight: bold;
+  color: #05364A;
+}
+#nav a.router-link-exact-active {
+  color: #679436ff;
+}
+html, body {
+height: 100vh;
+}
+
+body {
+  color: #2e3134;
+  align-items: center;
+  text-align: -webkit-center;
+  max-width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+background: #626262;
+}
+#content{
+    background-color: transparent;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%,
+    rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%,
+    rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%,
+    transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%,
+    transparent 77%, transparent);
+    background-repeat: round;
+  min-height: 100%;
+  background-size:50px 50px;
+}
+
+.basDePage {
+/*  position: inherit;*/
+  margin-top: 2em;
+  height: 3em;
+  bottom: 0;
+  width: 100%;
+}
+
+
+h1 {
+  font-weight: 200;
+    font-family: 'Russo One', sans-serif;
+}
+h2 {
+  font-weight: 200;
+  font-family: 'Russo One', sans-serif;
+}
+h3 {
+  font-weight: 200;
+  font-family: 'Russo One', sans-serif;
+}
+h4 {
+  font-weight: 100;
+  font-size: 1.2em;
+  font-family: 'Russo One', sans-serif;
+}
+.margin20 {
+  margin-right: 2em;
+}
+/* Les flex box */
+.contener_colonne_basique {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.conteneur_col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.marge {
+  margin: 0.5em;
+}
+
+#center {
+  /*text-align: center;*/
+  display: unset;
+}
+.box {
+  border: 2px black solid;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 0.5em;
+}
+.tool {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  flex-direction: row;
+}
+.conteneur_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-right: 2em;
+    font-family: 'Russo One', sans-serif;
+}
+.conteneur_menu_verticale {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-right: 2em;
+    font-family: 'Russo One', sans-serif;
+}
+.conteneur_col_left {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.conteneur_row_left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.conteneur_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+.left {
+  text-align: left;
+}
+#conteneur_row_resolution {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#conteneur_row_dice {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.box_col {
+    border: 4px solid rgba(44, 44, 44, 0.781);
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0.5vh;
+}
+.conteneur_flex {
+  border: 4px solid rgba(44, 44, 44, 0.781);
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*==Flex box Liste ==*/
+.listRS {
+  list-style: none;
+}
+.listTraiter {
+  list-style: none;
+  background-color: #818181;
+}
+.listBox {
+    list-style: none;
+    display: block;
+    text-align: left;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+.listRow {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.listSimple {
+    list-style: none;
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.listeVehicule {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  text-align: left;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.listArme {
+    list-style: none;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.espace {
+  margin-right: 0.5em;
+}
+.radioBox {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #838383;
+    width: 25%;
+    margin-bottom: 0.5em;
+}
+/**==Présentation générale==*/
+section {
+  max-width: 95%;
+}
+/*==Formulaire==*/
+label {
+    font-family: 'Russo One', sans-serif;
+}
+.sizeInpute {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+.boxe {
+  background-color: black;
+  color: white;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.boxePresentation {
+  border: 1px black solid;
+}
+.black {
+  color: black;
+}
+.red {
+  color: red;
+}
+.zone {
+  width: 30%;
+  text-align: justify;
+}
+.backgroundTextarea {
+  background: white;
+  width: 100%;
+  border: 1px solid black;
+  -webkit-box-shadow: 3px 3px 0px 0px #468C92;
+  box-shadow: 3px 3px 0px 0px #468C92;
+}
+/*==Présentation tableau==*/
+table {
+  max-width: 100%;
+  border: 1 px black, solid;
+  background-color: #98a098;
+  vertical-align: middle;
+  margin-bottom: 0.2em;
+  font-size: 1em;
+  min-width: 60%;
+  margin-left: 1em;
+  margin-right: 0em;
+}
+.cellule_centre {
+  text-align: center;
+}
+td {
+/*  height: 5em;*/
+  min-width: 2em;
+  text-align: center;
+}
+tr:nth-child(odd)
+{
+  background-color: #b3b3b3;
+}
+tr:nth-child(even)
+{
+  background-color: #818181;
+}
+.reponse {
+  width: 4em;
+  text-align: center;
+}
+/*===Conteneur ordres===*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em 1em;
+    grid-template-areas: "Contact Charge";
+    height: 10%;
+}
+.Contact {
+    grid-area: Contact;
+    border: 8px black groove;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Charge {
+    grid-area: Charge;
+    border: 8px #414141 groove;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ordre_simple {
+    border: 5px  groove;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+/**==Images==*/
+.image_simple {
+    border: 5px  groove;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 0.2em;
+}
+/*===Fin conteneur ordre===*/
+/*==Contenaire tableaux des bonus / malus - etape==*/
+.conteneur_etape {
+    display: flex;
+    flex-direction: column;
+}
+/*==Conteneur à dés et style des boutons de dé==*/
+.dice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dice_type {
+    text-transform: uppercase;
+    text-align: center;
+    border: 4px solid #929292;
+    background: #981212;
+    width: 4em;
+}
+/*====Fin contenaire====*/
+/*==Style des bouton==*/
+.stop {
+    background: #fe5252;
+}
+.ok {
+    background: linear-gradient(195deg, #8df723, #b8350c);
+}
+.passe {
+    background: linear-gradient(245deg, white, black);
+    color: white;
+}
+.linkNav {
+  text-decoration: none;
+  color: Black;
+}
+.classique {
+        font-size: 1em;
+        height: 3em;
+        min-width: 3em;
+        width: auto;
+        display:block;
+        text-decoration:none;
+        text-transform: uppercase;
+        font-weight: 400;
+        /* margin:0 auto; */
+        margin-bottom: 0.5em;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius:7px;
+        border:solid 1px  #bf0603;
+        background-color: #c3c3c3;
+        text-align:center;
+        padding: auto;
+        -webkit-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        transition: all 0.1s;
+        -webkit-box-shadow: 0px 5px 0px  #d0acab;
+        -moz-box-shadow: 0px 5px 0px  #d0acab;
+        box-shadow: 0px 5px 0px   #dcc4c3;
+        font-family: 'Russo One', sans-serif;
+}
+/*==Boutton de gestion del, edit, record, update des articles==*/
+.buttonGestionLore {
+  font-size: 1em;
+  height: auto;
+  width: auto;
+  display:block;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-weight: 400;
+  /* margin:0 auto; */
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: auto;
+  padding-bottom: auto;
+  margin: 0.5em;
+  border-radius:7px;
+  border:solid 1px  #bf0603;
+  background-color: #c3c3c3;
+  text-align:center;
+  padding: auto;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-box-shadow: 0px 5px 0px  #d0acab;
+  -moz-box-shadow: 0px 5px 0px  #d0acab;
+  box-shadow: 0px 5px 0px   #dcc4c3;
+  font-family: 'Russo One', sans-serif;
+}
+.classique:active {
+    -webkit-box-shadow: 0px 5px 0px  #d0acab;
+    -moz-box-shadow: 0px 5px 0px  #d0acab;
+    box-shadow: 0px 5px 0px   #dcc4c3;
+    position:relative;
+    top:7px;
+}
+.button_active {
+  font-size: 1em;
+  height: 3em;
+  min-width: 3em;
+  width: auto;
+  display:block;
+  text-decoration:none;
+  background-color: #c3c3c3;
+  font-weight: 400;
+  /* margin:0 auto; */
+  margin-bottom: 0.5em;
+  margin-top: 0em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:7px;
+  border:solid 1px #22ba18;
+  color:  #03bf1f;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 2px 0px #03bf1f;
+  -moz-box-shadow: 0px 2px 0px  #03bf1f;
+  box-shadow: 0px 2px 0px   #03bf1f;
+  position:relative;
+  top:7px;
+  font-family: 'Russo One', sans-serif;
+}
+.aButton {
+  text-decoration: none;
+}
+/*==Bouton suite==*/
+/*Button Two*/
+.button-two {
+  border:solid 1px  #bf0603;
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color:#c3c3c3;
+  padding: 1em;
+  width: auto;
+  transition: all 0.5s;
+}
+/*==Luminosité panneau de contrôle.==*/
+.ligth {
+  background-color: #009216;
+}
+
+/*Présentation*/
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); == Ancienne police */
+.titre {
+    font-size: 2em;
+    color: #2e3134;
+    font-weight: 100;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    padding: 0.05em;
+    /*text-shadow: 1px 1px 2px rgb(21, 167, 142), 0 0 1em rgb(121, 121, 129), 0 0 0.2em rgb(5, 5, 5);
+*/
+}
+.sous_titre {
+    font-size: large;
+    color: #2e3134;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    padding: 0.05em;
+    /*text-shadow: 1px 1px 2px rgb(21, 167, 142), 0 0 1em rgb(121, 121, 129), 0 0 0.2em rgb(5, 5, 5);
+*/
+}
+.sous_titre_3 {
+    padding-left: 0.4em;
+    color: #2e3134;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 100;
+    font-family: 'Russo One', sans-serif;
+    /*text-shadow: 1px 1px 2px rgb(21, 167, 142), 0 0 1em rgb(121, 121, 129), 0 0 0.2em rgb(5, 5, 5);
+*/
+}
+.paragraphe {
+  border: black solid 2px;
+  text-align: justify;
+  padding: 0.5em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+}
+.paragrapheVehicule {
+  width: 90%;
+  border: black solid 2px;
+  text-align: justify;
+  padding: 0.5em;
+  /*margin-left: 0.8em;*/
+/*  margin-right: 0.8em;*/
+}
+.encart {
+  text-align: justify;
+  width: 10%;
+  padding: 0.5em;
+}
+/*==Avertissement==*/
+.avertissement {
+  color: #bf0603;
+  background-color: black;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+  font-size: 1em;
+  width: 50%;
+  text-align: center;
+}
+.center {
+text-align: center;
+}
+/*==Fontawesome==*/
+.doublesize {
+  font-size: 2em;
+  color: #bf0603;
+}
+/*==Validation==*/
+.validation {
+    text-transform: uppercase;
+    text-align: center;
+    border: 4px solid #929292;
+    border-radius: 0.7em;
+    height: 3.5em;
+    margin: 0.5em;
+    padding-top: 0.2em;
+}
+.nav_style {
+  border: 4px solid #929292;
+  border-radius: 25px;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+}
+.nav_style:hover {
+  border: 4px  solid rgba(255,5,5,0.53);
+  -webkit-box-shadow: -2px 0px 14px 1px rgba(255,5,5,0.53);
+  box-shadow: -2px 0px 14px 1px rgba(255,5,5,0.53);
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 0.2em;
+}
+/*==Présentation aide de jeu==*/
+.conteneur_adj {
+  width: 95%;
+}
+.menuGauche {
+  width: 10%;
+}
+.texteDroite {
+  width: 80%
+}
+.lienNav {
+  font-family: 'Russo One', sans-serif;
+  color: #2e3134;
+  text-decoration: underline;
+}
+.lienNav:hover {
+  color: #42b983;
+}
+.lienInfo {
+  font-family: 'Russo One', sans-serif;
+  color: #2e3134;
+  text-decoration: none;
+}
+.lienInfo:hover {
+  color: #bf0603;
+}
+/*==Fin Présentation aide de jeu==*/
+
+@media screen and (max-width: 740px) {
+  #nav {
+    padding: 30px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;
+  }
+  body {
+  overflow: scroll;
+  }
+  .margin20 {
+    margin-bottom: 0.5em;
+  }
+  .titre {
+      font-size: medium;
+      /* font-family: 'Black Ops One'; === Ancienne police */
+      font-family: 'Russo One', sans-serif;
+      text-transform: uppercase;
+      padding: 0.05em;
+  }
+  .sous_titre {
+      font-size: small;
+      text-transform: uppercase;
+      font-family: 'Russo One', sans-serif;
+      padding: 0.05em;
+      /*text-shadow: 1px 1px 2px rgb(21, 167, 142), 0 0 1em rgb(121, 121, 129), 0 0 0.2em rgb(5, 5, 5);
+  */
+  }
+  .sous_titre_3 {
+      padding-left: 0.4em;
+      text-transform: uppercase;
+      font-size: x-small;
+      font-family: 'Russo One', sans-serif;
+      /*text-shadow: 1px 1px 2px rgb(21, 167, 142), 0 0 1em rgb(121, 121, 129), 0 0 0.2em rgb(5, 5, 5);
+  */
+  }
+  .listBox {
+    margin-right: 1em;
+    margin-left: -1em;
+  }
+  .avertissement {
+    color: red;
+    background-color: black;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.8em;
+    width: 50%;
+  }
+  /*=conteneur=*/
+  .conteneur_row_left {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+  }
+  /*==Bouton de sauvegarde==*/
+  .conteneur_row {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  .espace {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .lienNav {
+    color: #2e3134;
+    margin-bottom: 0.5em;
+  }
+  .lienNav:hover {
+    color: #42b983;
+  }
+  .listRow {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+}
+/*==GrapesJS CSS==*/
+/* Let's highlight canvas boundaries */
+
+#gjs {
+  border: 3px solid #444;
+}
+
+/* Reset some default styling */
+.gjs-cv-canvas {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.gjs-block {
+  width: 100%;
+  height: 100%;
+  min-height: auto;
+}
+/*=Fin GrapesJS=*/

@@ -1,0 +1,33 @@
+<i class="fas fa-power-off"></i> - On / Off
+<i class="fas fa-user-check"></i> - Utilisateur connecter
+<i class="fas fa-radiation-alt"></i> - Radiation
+<i class="fas fa-feather"></i> - Ecrire
+<i class="fas fa-arrow-left"></i> - Fléche menu gauche
+<i class="fas fa-arrow-right"></i> - Fléche menu droite
+<i class="far fa-file-pdf"></i> - Impression pdf
+<i class="fas fa-hat-wizard"></i> - Chapeau de sorcier
+<i class="far fa-address-card"></i> - Nouvelle inscription
+<i class="fas fa-drafting-compass"></i> - compas
+<i class="fas fa-tools"></i> - Outils -> Création d'une nouvelles armes
+<i class="fas fa-file-alt"></i> - Liste d'article
+<i class="fas fa-book-dead"></i> - Bouquin + tête de mort -> Règles spéciales
+<i class="fab fa-odnoklassniki-square"></i> - création d'unité
+<i class="fas fa-truck-pickup"></i> - creation de véhicule
+<i class="fas fa-file-upload"></i> - fixer une figurine
+<i class="fas fa-car"></i> - vehicule
+Calcul des dés :
+D6 - 0.5
+D8 - 1.0
+D10 - 1.5
+D12 - 2.0
+Valeur de puissance :
+1D - 1
+2D - 1.5
+3D - 2
+4D - 2.5
+5D - 3
+Valeur de portée :
+log(portée)
+Valeur d'une arme = log(portée) + Valeur de puissance
+Valeur des règles spécial : Valeur de l'arme * % de la RS
+Valeur total =  Valeur Arme + Valeur RS
