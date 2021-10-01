@@ -24,10 +24,11 @@ include 'stockage/pointDeVie.php';
   }
   ?>
   <h3>Nom de la liste : <?php echo $dataListe[0]['nomListe']; ?></h3>
+  <?php if(isset($_GET['message44'])) {echo $_GET['message44'];} ?>
   <ul class="listBox">
     <li>Univers : <?php echo $dataListe[0]['nomUnivers']; ?></li>
     <li>Nom faction : <?php echo $dataListe[0]['nomFaction']; ?></li>
-    <li>Valeur : <?php echo $dataListe[0]['valeurListe']; ?> points</li>
+    <li>Valeur : <?php $valeurListe = $dataListe[0]['valeurListe']; echo $valeurListe; ?> points</li>
   </ul>
   </article>
   <article>
@@ -58,9 +59,10 @@ include 'stockage/pointDeVie.php';
       <input type="hidden" name="idListe" value="'.$dataListe[0]['idListeArmee'].'">
       <input type="hidden" name="id_Unite" value="'.$key['idUnite'].'">
       <input type="hidden" name="valeur" value="'.$key['valeurUnite'].'">
+      <input type="hidden" name="typeElement" value="1" />
       <div class="conteneur_row">
       <label for="numbre">Nombre de figurine</label>
-      <input id="number" class="sizeInpute" type="number" name="nbr" v-model="nombre" min="1" max="24">
+      <input id="number" class="sizeInpute" type="number" name="nbr" min="1" max="24">
       <button class="buttonGestionLore " type="submit" name="button">Ajouter</button>
       </div>
     </form>
