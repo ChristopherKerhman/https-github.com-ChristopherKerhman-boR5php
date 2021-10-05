@@ -1,3 +1,4 @@
+<p class="paragraphe">Fixer ou defixer une unité entraine l'effacement de celui-ci dans toute les listes afin de le mettre à jour. La mise a jour du prix des listes se ferra lorsque vous la mettrez à jours.</p>
 <?php
 include 'stockage/yes.php';
 if (empty($dataUnite)) {

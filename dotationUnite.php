@@ -11,7 +11,7 @@ $id = $_GET['id'];
   // data sortie : $dataOneU
   include 'affichages/oneUnite.php';
   $search = $dataOneU[0]['id_faction'];
- $weaponSize = 0;
+  $weaponSize = 0;
   include 'affichages/weaponDotation.php';
    ?>
 </section>

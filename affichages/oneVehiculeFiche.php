@@ -30,15 +30,6 @@ foreach ($dataDotationVehicule as $key) {
     <strong>Puissance:</strong>  &thinsp;'.$key['puissance'].$typeDe[$dataOneV[0]['DC']]['de'].'
     ';
     if ($key['sort'] == 1) {echo '- sort -';}
-
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5)).' points
-    &thinsp;<form action="gestionDB/del/armeVehicule.php" method="post">
-    <input type="hidden" name="idDotation" value="'.$key['idDotationVehicule'].'">
-    <input type="hidden" name="idUnite" value="'.$dataOneV[0]['idVehicule'].'">
-    <input type="hidden" name="valeur" value="'.$newValeur.'">
-    <button class="buttonGestionLore" type="submit" name="button">Effacer</button>
-    </form>
-    </li>';
   }
   if ($key['type'] == 2) {
     $type = 'Arme de tir';
@@ -53,12 +44,7 @@ foreach ($dataDotationVehicule as $key) {
     if ($key['sort'] == 1) {echo ', - sort';}
 
     echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5)).' points
-    &thinsp;<form action="gestionDB/del/armeVehicule.php" method="post">
-    <input type="hidden" name="idDotation" value="'.$key['idDotationVehicule'].'">
-    <input type="hidden" name="idUnite" value="'.$dataOneV[0]['idVehicule'].'">
-    <input type="hidden" name="valeur" value="'.$newValeur.'">
-    <button class="buttonGestionLore" type="submit" name="button">Effacer</button>
-    </form>
+    &thinsp;
     </li>';
   }
   if ($key['type'] == 3) {

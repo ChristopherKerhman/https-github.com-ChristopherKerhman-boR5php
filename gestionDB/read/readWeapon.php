@@ -1,7 +1,7 @@
 <?php
   //include 'gestionDB/identifiantDB.php';
   //include 'gestionDB/controleFormulaires.php';
-  include 'gestionDB/readDB.php';
+//  include 'gestionDB/readDB.php';
   if ($lock === 0) {
     $requetteSQL = "SELECT `idArme`, `nomArme`, `rangeMax`, `puissance`, `lourde`, `assaut`, `couverture`, `sort`, `cadence`,
     `type`, `valeur`, `explosif`, `dExplosive`, `verrou`, `armeVehicule`
