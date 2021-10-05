@@ -25,8 +25,9 @@ include 'stockage/typeVehicule.php';
     $dataListe = $data->fetchAll();
   }
   ?>
-  <h3>Nom de la liste : <?php echo $dataListe[0]['nomListe']; ?></h3>
-  
+  </a>
+  <h3>Nom de la liste : <?php echo '<a class="lienNav" href="publication.php?idListe='.$dataListe[0]['idListeArmee'].'">'.$dataListe[0]['nomListe'].'</a>'; ?></h3>
+
   <?php if(isset($_GET['message44'])) {echo $_GET['message44'];} ?>
   <ul class="listBox">
     <li>Univers : <?php echo $dataListe[0]['nomUnivers']; ?></li>

@@ -548,6 +548,14 @@ tr:nth-child(even)
   width: 10%;
   padding: 0.5em;
 }
+/*====Publication======*/
+.publication{
+  background-color: white;
+
+}
+.leftPublication {
+  text-align: left;
+}
 /*==Avertissement==*/
 .avertissement {
   color: #bf0603;
