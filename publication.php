@@ -183,7 +183,7 @@ foreach ($dataWeaponV as $gun) {
   echo ')';
   // Fin de l'extraction des règles spécial
 }
-echo '<li><br /></li><li><strong>Sauvegarde :</strong> '.$blindage[$dataVehicule[0]['svg']]['svg'].' <strong>Point de Structure :</strong> '.$structure[$dataVehicule[0]['pointStructure']]['ps'].'</li>';
+echo '<li><br /></li><li><strong>Sauvegarde :</strong> '.$blindage[$dataVehicule[0]['svg']]['svg'].' <strong>Point de Structure :</strong> '.$structure[$dataVehicule[0]['pointStructure']]['ps'].'</li></ul>';
 
 //Fin
 }

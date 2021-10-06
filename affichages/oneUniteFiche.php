@@ -63,12 +63,6 @@ if ($key['type'] == 3) {
     if ($key['sort'] == 1) {echo ', - sort';}
 
     echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5)).' points
-    &thinsp;<form action="gestionDB/del/armeUnite.php" method="post">
-    <input type="hidden" name="idDotation" value="'.$key['idDotation'].'">
-    <input type="hidden" name="idUnite" value="'.$dataOneU[0]['idUnite'].'">
-    <input type="hidden" name="valeur" value="'.$newValeur.'">
-    <button class="buttonGestionLore" type="submit" name="button">Effacer</button>
-    </form>
     </li>';
     echo '<li><strong>Gabarit:</strong>&thinsp;'.$gabarit[$key['explosif']]['texte'].'
     &thinsp; <strong>Dé d\'explosion:</strong>&thinsp; '.$explosion[$key['dExplosive']]['texte'].'
@@ -81,7 +75,7 @@ if ($key['type'] == 3) {
  $data->execute();
  $data->setFetchMode(PDO::FETCH_ASSOC);
  $dataRS = $data->fetchAll();
-echo '<ul class="listRow">';
+echo '<ul class="listRow"><li><strong>Règles spéciales de l\'arme : </strong></li>';
 foreach ($dataRS as $listing) {
   echo '<li>'.$listing['nomRS'].'&thinsp;</li>';
 }
