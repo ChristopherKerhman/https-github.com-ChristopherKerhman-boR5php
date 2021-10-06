@@ -1,4 +1,31 @@
 <?php
+// Générale
+$yes = [
+  ['index' => 0, 'texte' => 'Non'],
+  ['index' => 1, 'texte' => 'Oui'],
+];
+$typeDe = [
+  ['de' => 'D6', 'valeur' => 0, 'prix' => 6],
+  ['de' => 'D8', 'valeur' => 1, 'prix' => 8],
+  ['de' => 'D10', 'valeur' => 2, 'prix' => 10],
+  ['de' => 'D12', 'valeur' => 3, 'prix' => 12],
+];
+// Armes
+$gabarit = [
+  ['index' => 0, 'texte' => 'Non applicable', 'prix' => 0],
+  ['index' => 1, 'texte' => 'Petit', 'prix' => 2],
+  ['index' => 2, 'texte' => 'Moyen', 'prix' => 5],
+  ['index' => 3, 'texte' => 'Grand', 'prix' => 10],
+];
+$explosion = [
+    ['index' => 0, 'texte' => 'Non applicable', 'prix' => 0],
+    ['index' => 1, 'texte' => 'D6', 'prix' => 2],
+    ['index' => 2, 'texte' => 'D8', 'prix' => 4],
+    ['index' => 3, 'texte' => 'D10', 'prix' => 8],
+    ['index' => 4, 'texte' => 'D12', 'prix' => 12],
+
+];
+// Figurines
 $pdv = [
   ['index' => 0, 'pdv' => 1],
   ['index' => 1, 'pdv' => 2],
@@ -34,16 +61,8 @@ $typeTroupe = [
   ['troupe' => 'Officier suppérieur', 'valeur' => 5, 'prix' => 4],
   ['troupe' => 'Mage', 'valeur' => 6, 'prix' => 6]
 ];
-$yes = [
-  ['index' => 0, 'texte' => 'Non'],
-  ['index' => 1, 'texte' => 'Oui'],
-];
-$typeDe = [
-  ['de' => 'D6', 'valeur' => 0, 'prix' => 6],
-  ['de' => 'D8', 'valeur' => 1, 'prix' => 8],
-  ['de' => 'D10', 'valeur' => 2, 'prix' => 10],
-  ['de' => 'D12', 'valeur' => 3, 'prix' => 12],
-];
+
+// Véhicules
 $typeVehicule = [
   ['index' => 0, 'type' => 'Militaire', 'prix' => 2],
   ['index' => 1, 'type' => 'civile', 'prix' => 1],
@@ -89,23 +108,6 @@ $structure = [
   ['index' => 10, 'ps' => 11, 'prix' => 20],
   ['index' => 11, 'ps' => 12, 'prix' => 24],
 ];
-$yes = [
-  ['index' => 0, 'texte' => 'Non'],
-  ['index' => 1, 'texte' => 'Oui'],
-];
-$gabarit = [
-  ['index' => 0, 'texte' => 'Non applicable', 'prix' => 0],
-  ['index' => 1, 'texte' => 'Petit', 'prix' => 2],
-  ['index' => 2, 'texte' => 'Moyen', 'prix' => 5],
-  ['index' => 3, 'texte' => 'Grand', 'prix' => 10],
-];
-$explosion = [
-    ['index' => 0, 'texte' => 'Non applicable', 'prix' => 0],
-    ['index' => 1, 'texte' => 'D6', 'prix' => 2],
-    ['index' => 2, 'texte' => 'D8', 'prix' => 4],
-    ['index' => 3, 'texte' => 'D10', 'prix' => 8],
-    ['index' => 4, 'texte' => 'D12', 'prix' => 12],
 
-];
 
  ?>

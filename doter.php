@@ -26,7 +26,7 @@ include 'stockage/typeVehicule.php';
   }
   ?>
   </a>
-  <h3>Nom de la liste : <?php echo '<a class="lienNav" href="publication.php?idListe='.$dataListe[0]['idListeArmee'].'">'.$dataListe[0]['nomListe'].'</a>'; ?></h3>
+  <h3>Nom de la liste : <?php echo '<a class="lienNav" href="publication.php?idListe='.$dataListe[0]['idListeArmee'].'"><i class="far fa-file"></i> &nbsp;'.$dataListe[0]['nomListe'].'</a>'; ?></h3>
 
   <?php if(isset($_GET['message44'])) {echo $_GET['message44'];} ?>
   <ul class="listBox">

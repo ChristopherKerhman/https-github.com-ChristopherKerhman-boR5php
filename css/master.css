@@ -551,10 +551,13 @@ tr:nth-child(even)
 /*====Publication======*/
 .publication{
   background-color: white;
-
 }
 .leftPublication {
   text-align: left;
+}
+.listePublication, li {
+  list-style: none;
+  padding-bottom: 0.3em;
 }
 /*==Avertissement==*/
 .avertissement {
