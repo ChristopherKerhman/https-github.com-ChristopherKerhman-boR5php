@@ -268,6 +268,10 @@ label {
 }
 .boxePresentation {
   border: 1px black solid;
+  border-radius: 4px;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  margin-bottom: 0.5em;
 }
 .black {
   color: black;
