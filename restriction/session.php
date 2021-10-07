@@ -7,5 +7,6 @@ if (isset($autorisation) && ($autorisation > $_SESSION['role'])) {
 $titre =  "R5 Le jeu de bataille générique";
 $slogan = "Recycler vos figurines et donner leur une seconde vie";
 $css = 'css/master.css';
+$Fcss = 'css/Fmaster.css';
 $vueJSCDN = 'node_modules/vue/dist/vue.global.prod.js';
  ?>

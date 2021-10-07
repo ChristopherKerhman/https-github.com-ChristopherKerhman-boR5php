@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   include '../readDB.php';
   $data->bindParam(':idFactionUnivers', $idFactionUnivers);
   $data->bindParam(':nomFaction', $nomFaction);
-  $data->bindParam('idP', intval($_SESSION['idUser']));
+  $data->bindParam('idP', $_SESSION['idUser']);
   $data->execute();
   header('location:../../nouvelleFaction.php');
 } else {
