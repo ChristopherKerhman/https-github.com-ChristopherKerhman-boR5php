@@ -27,13 +27,29 @@ height: 100vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 90%
+  width: 90%;
+  justify-content: center;
+  margin-bottom: 2em;
 }
+.decal_R {
+    padding-right: 0.5em;
+}
+
 .lienButton {
   text-decoration: none;
   color: #2e3134;
 }
-
+.paragrapheArticle {
+  width: 80%;
+  border: black solid 2px;
+  color:  #cacaca;
+  background-color: #2e3134;
+  text-align: justify;
+  padding: 0.8em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
 
 /*==Fin Front==*/
 
@@ -107,7 +123,6 @@ h4 {
 }
 
 #center {
-  /*text-align: center;*/
   display: unset;
 }
 .box {

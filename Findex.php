@@ -2,6 +2,7 @@
 include 'Fheader.php';
 include 'gestionDB/read/Funivers.php';
 $_SESSION['idUniversVisite'] = NULL;
+$_SESSION['nomUnivers'] = NULL;
 //$dataUnivers
 ?>
 <section>

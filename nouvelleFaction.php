@@ -7,8 +7,7 @@ include 'header.php';
   <?php
   include 'formulaires/creationFaction.php';
   include 'affichages/listeFaction.php';
-   ?>
-
+    ?>
 </section>
 <?php
   include 'footer.php';

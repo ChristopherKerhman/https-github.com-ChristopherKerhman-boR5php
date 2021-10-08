@@ -7,5 +7,4 @@
      <label for="titreArticle">nouvelle faction :</label>
      <input id="titreArticle" class="sizeInpute" type="text" name="nomFaction" placeholder="Nom de la faction" size="50">
       <button class="classique" type="submit" name="button">Enregistrer</button>
-    </div>
   </form>

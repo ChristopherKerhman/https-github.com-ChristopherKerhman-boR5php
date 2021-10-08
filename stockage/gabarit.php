@@ -1,6 +1,6 @@
 <?php
 $gabarit = [
-  ['index' => 0, 'texte' => 'Non applicable', 'prix' => 0],
+  ['index' => 0, 'texte' => 'Non applicable', 'prix' => 3],
   ['index' => 1, 'texte' => 'Petit', 'prix' => 2],
   ['index' => 2, 'texte' => 'Moyen', 'prix' => 5],
   ['index' => 3, 'texte' => 'Grand', 'prix' => 10],

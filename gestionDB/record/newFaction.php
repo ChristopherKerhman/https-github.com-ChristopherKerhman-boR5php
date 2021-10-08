@@ -5,12 +5,11 @@ include '../../restriction/session.php';
 include '../identifiantDB.php';
 include '../controleFormulaires.php';
 include '../../stockage/librairie.php';
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
+if(($_SERVER['REQUEST_METHOD'] === 'POST') && ($_POST['nomFaction'] != '')) {
   if (empty($_POST['idMultivers'])) {
   header('location:../../index.php');
   }
   $idFactionUnivers = filter($_POST['idMultivers']);
-  checkemptyData($_POST['nomFaction']);
   $nomFaction = filter($_POST['nomFaction']);
   $nomFaction = str_replace($NonClan, $replace, $nomFaction);
   $requetteSQL = "INSERT INTO `factions`(`idFactionUnivers`, `nomFaction`, `id_proprietaire`) VALUES (:idFactionUnivers, :nomFaction, :idP)";
