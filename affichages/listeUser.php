@@ -13,9 +13,14 @@
 <ul class="listBox">
   <?php
   foreach ($dataListe as $key) {
-
       if ($key['valide'] == 1){
-    echo '<li >'.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'
+    if ($key['fixerListe'] == 1) {
+    $ok = '<i class="fas fa-cloud-upload-alt"></i>';
+   } else {
+     $ok = '<i class="fas fa-cloud"></i>';
+   }
+
+    echo '<li >'.$ok.' '.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'
     <a class="lienNav" href="gestionDB/edit/valideListe.php?id='.$key['idListeArmee'].'">Invalider</a></li>';}
   }
   ?>
@@ -25,7 +30,8 @@
   <?php
   foreach ($dataListe as $key) {
       if ($key['valide'] == 0){
-    echo '<li >'.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'
+         $ok = '<i class="fas fa-cloud"></i>';
+    echo '<li >'.$ok.'  '.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'
     <a class="lienNav" href="gestionDB/edit/valideListe.php?id='.$key['idListeArmee'].'">Valider</a></li>';}
   }
   ?>

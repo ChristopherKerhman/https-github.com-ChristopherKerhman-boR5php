@@ -1,5 +1,4 @@
 <?php
-$autorisation = 1;
 include 'restriction/session.php';
 include 'stockage/figurine.php';
 include 'gestionDB/read/liste.php';
@@ -40,6 +39,7 @@ echo'<li><h4>'.$key['nomFigurine'].' - Nombre : '.$key['nbr'].' - Valeur total :
     }
     echo '<li><strong>Mouvement :</strong> '.$key['deplacement'].'" / '.$key['course'].'" + 1D4" - <strong>Vol :</strong> '.$yes[$key['vol']]['texte'].' - <strong>Vol stationnaire : </strong>'.$yes[$key['station']]['texte'].'</li>
     <li><h4>Equipement</h4></li>';
+
 $requetteSQL = "SELECT `idDotation`, `idArme`, `nomArme`, `rangeMax`, `puissance`, `lourde`, `assaut`, `couverture`, `sort`, `cadence`, `type`,`explosif`, `dExplosive`
 FROM `unite_armes`
 INNER JOIN `armes` ON `id_arme` = `idArme`
@@ -135,7 +135,6 @@ $data->bindParam(':idVehicule', $key['id_Vehicule']);
 $data->execute();
 $data->setFetchMode(PDO::FETCH_ASSOC);
 $dataWeaponV = $data->fetchAll();
-// Affichage des armes
 foreach ($dataWeaponV as $gun) {
   if ($gun['type'] == 1) {
     echo '<li><strong>Arme de mêlée : </strong> '.$gun['nomArme'].' <strong>Puissance :</strong> '.$gun['puissance'].$typeDe[$dataVehicule[0]['DC']]['de'].' <strong>Sort :</strong>'.$yes[$gun['sort']]['texte'];
