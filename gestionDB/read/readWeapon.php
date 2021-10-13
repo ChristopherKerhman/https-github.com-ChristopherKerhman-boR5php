@@ -11,7 +11,7 @@
     $requetteSQL = "SELECT `idArme`, `nomArme`, `rangeMax`, `puissance`, `lourde`, `assaut`, `couverture`, `sort`, `cadence`,
     `type`, `valeur`, `explosif`, `dExplosive`, `verrou`, `armeVehicule`
     FROM `armes`
-    WHERE `idUnivers` = :idU AND `idCreateur` = :idUser AND `verrou` = 1 ORDER BY `idArme` DESC";
+    WHERE `idUnivers` = :idU AND `idCreateur` = :idUser AND `verrou` = 1 ORDER BY `nomArme` ASC";
   }
   include 'gestionDB/readDB.php';
   $data->bindParam('idU', $idU);

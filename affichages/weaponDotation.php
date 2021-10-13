@@ -82,7 +82,8 @@ foreach ($dataRS as $listing) {
 }
   echo '</ul>';
   if ($weaponSize > 0) {
-    echo '</td><td>'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5)).'</td>
+  $valeurAdd =  $key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5);
+    echo '</td><td>'.round($valeurAdd, 0).'</td>
         <td>
         <form action="gestionDB/record/addDotationVehicule.php" method="post">
                <input type="hidden" name="id_vehicule" value="'.$dataOneV[0]['idVehicule'].'">
@@ -93,7 +94,8 @@ foreach ($dataRS as $listing) {
         </td>
       </tr>';
   } else {
-    echo '</td><td>'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5)).'</td>
+  $valeurAdd =  $key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5);
+    echo '</td><td>'.round($valeurAdd, 0).'</td>
         <td>
         <form action="gestionDB/record/addDotation.php" method="post">
                <input type="hidden" name="id_unite" value="'.$dataOneU[0]['idUnite'].'">
@@ -104,8 +106,7 @@ foreach ($dataRS as $listing) {
         </td>
       </tr>';
   }
-
-  }
+}
 
  ?>
   </table>

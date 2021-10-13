@@ -15,7 +15,7 @@ include 'gestionDB/read/liste.php';
   </head>
 <body class="publication">
 <section class="leftPublication">
-  <h3>Liste : <?php echo $dataListeName[0]['nomListe'].' Valeur : '.$dataListeName[0]['valeurListe'].' Points'; ?> </h3>
+  <h3>Liste : <?php echo $dataListeName[0]['nomListe'].' - Valeur : '.$dataListeName[0]['valeurListe'].' Points'; ?> - Point de Commandement total : <?php echo round($TotalPC[0]['totalPC'], 0); ?> </h3>
 <?php
 //Read liste Unite
 if (!empty($dataListeUnite)) {
@@ -84,11 +84,11 @@ foreach ($dataWeapon as $gun) {
   $data->execute();
   $data->setFetchMode(PDO::FETCH_ASSOC);
   $dataRS = $data->fetchAll();
-  echo '&thinsp;<strong>Règles spécial </strong>( ';
+  echo '&thinsp;<strong>Règles spécial</strong> ';
   foreach ($dataRS as $listeRS) {
-  echo ' '.$listeRS['nomRS'].' ';
+  echo '/ '.$listeRS['nomRS'];
   }
-  echo ')';
+  echo '.';
   // Fin de l'extraction des règles spécial
 }
 //Fin
@@ -125,7 +125,7 @@ foreach ($dataListeVehicule as $key) {
     <li><strong>Equipage :</strong> '.$equipage[$dataVehicule[0]['equipage']]['equipage'].' <strong>Passager :</strong> '.$passager[$dataVehicule[0]['passager']]['nbr'].'</li>
     <li><strong>Mouvement :</strong>'.$dataVehicule[0]['mouvementVehicule'].'" / '.$dataVehicule[0]['courseVehicule'].'" + 1D4" - <strong>Vol :</strong> '.$yes[$dataVehicule[0]['vol']]['texte'].'
     <strong> Vol stationnaire :</strong> '.$yes[$dataVehicule[0]['stationnaire']]['texte'].'</li><li><h4>Equipement</h4></li>';
-$requetteSQL = "SELECT `idDotationVehicule`, `nomArme`,  `rangeMax`, `puissance`, `valide`, `lourde`, `assaut`, `couverture`, `sort`, `cadence`, `type`,`explosif`, `dExplosive`
+$requetteSQL = "SELECT `idDotationVehicule`, `nomArme`,  `rangeMax`, `puissance`, `valide`, `lourde`, `assaut`, `couverture`, `sort`, `cadence`, `type`,`explosif`, `dExplosive`, `idArme`
 FROM `vehicule_armes`
 INNER JOIN `armes` ON `id_arme` = `idArme`
 WHERE `id_vehicule` = :idVehicule
@@ -170,11 +170,11 @@ foreach ($dataWeaponV as $gun) {
   $data->execute();
   $data->setFetchMode(PDO::FETCH_ASSOC);
   $dataRS = $data->fetchAll();
-  echo '&thinsp;<strong>Règles spécial </strong>( ';
+  echo '&thinsp;<strong>Règles spécial </strong> ';
   foreach ($dataRS as $listeRS) {
-  echo ' '.$listeRS['nomRS'].' ';
+  echo ' / '.$listeRS['nomRS'];
   }
-  echo ')';
+  echo '.';
   // Fin de l'extraction des règles spécial
 }
 echo '<li><br /></li><li><strong>Sauvegarde :</strong> '.$blindage[$dataVehicule[0]['svg']]['svg'].' <strong>Point de Structure :</strong> '.$structure[$dataVehicule[0]['pointStructure']]['ps'].'</li></ul>';

@@ -32,7 +32,14 @@ include 'stockage/typeVehicule.php';
   <ul class="listBox">
     <li>Univers : <?php echo $dataListe[0]['nomUnivers']; ?></li>
     <li>Nom faction : <?php echo $dataListe[0]['nomFaction']; ?></li>
-    <li>Valeur : <?php $valeurListe = $dataListe[0]['valeurListe']; echo $valeurListe; ?> points</li>
+    <li>Valeur : <?php
+    $requetteSQL = "SELECT SUM(`TotalValeur`) AS `somme` FROM `doterListeArmee` WHERE `idListe` = :id";
+    $data = $conn->prepare($requetteSQL);
+    $data->bindParam(':id', $idListe);
+    $data->execute();
+    $data->setFetchMode(PDO::FETCH_ASSOC);
+    $total = $data->fetchAll();
+   $total = $total[0]['somme']; echo round($total, 0); ?> points</li>
   </ul>
   </article>
 <?php // Affichage de la composition de la liste.

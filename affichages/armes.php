@@ -80,7 +80,7 @@ if (!empty($dataWeapon)) {
             echo '<td><form  action="gestionDB/edit/verrouWeapon.php" method="post">
               <input type="hidden" name="verrou" value="1" />
               <input type="hidden" name="idArme" value="'.$key['idArme'].'">
-               <button class="buttonGestionLore" type="submit" name="button">Verrouiller</button>
+               <button class="buttonGestionLore" type="submit" name="button"><i class="fas fa-tint"></i></button>
             </form></td>';
           } else {
               echo '<td>

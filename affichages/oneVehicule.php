@@ -3,6 +3,14 @@
 include 'stockage/typeVehicule.php';
 include 'stockage/de.php';
 include 'stockage/gabarit.php';
+?>
+<form class="conteneur_row" action="gestionDB/edit/fixeVehicule.php" method="post">
+  <h4>Verrouillage véhicule</h4>
+<input type="hidden" name="idVehicule" value="<?php echo $dataOneV[0]['idVehicule'] ?>">
+<input type="hidden" name="fixer" value="1"><button class="buttonGestionLore" type="submit" name="button"><i class="fas fa-tint"></i></button>
+</form>
+
+<?php
 foreach ($dataOneV as $key) {
 
 echo '<h3>Nom de véhicule : '.$key['nomVehicule'].'</h3>';
@@ -30,8 +38,8 @@ foreach ($dataDotationVehicule as $key) {
     <strong>Puissance:</strong>  &thinsp;'.$key['puissance'].$typeDe[$dataOneV[0]['DC']]['de'].'
     ';
     if ($key['sort'] == 1) {echo '- sort -';}
-
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5)).' points
+    $Valeur =  $key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5);
+    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.round($Valeur).' points
     &thinsp;<form action="gestionDB/del/armeVehicule.php" method="post">
     <input type="hidden" name="idDotation" value="'.$key['idDotationVehicule'].'">
     <input type="hidden" name="idUnite" value="'.$dataOneV[0]['idVehicule'].'">
@@ -52,7 +60,8 @@ foreach ($dataDotationVehicule as $key) {
     if ($key['couverture'] == 1) {echo '- Couverture - Cadence de tir = '.$key['cadence'];}
     if ($key['sort'] == 1) {echo ', - sort';}
 
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5)).' points
+    $Valeur =  $key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5);
+    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.round($Valeur).' points
     &thinsp;<form action="gestionDB/del/armeVehicule.php" method="post">
     <input type="hidden" name="idDotation" value="'.$key['idDotationVehicule'].'">
     <input type="hidden" name="idUnite" value="'.$dataOneV[0]['idVehicule'].'">
@@ -72,8 +81,8 @@ foreach ($dataDotationVehicule as $key) {
     if ($key['assaut'] == 1) {echo '- assaut';}
     if ($key['couverture'] == 1) {echo '- Couverture - Cadence de tir = '.$key['cadence'];}
     if ($key['sort'] == 1) {echo ', - sort';}
-
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5)).' points
+    $Valeur =  $key['valeur']*$key['puissance']*(($typeDe[$dataOneV[0]['DC']]['prix'])/5.5);
+    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.round($Valeur).' points
     &thinsp;<form action="gestionDB/del/armeVehicule.php" method="post">
     <input type="hidden" name="idDotation" value="'.$key['idDotationVehicule'].'">
     <input type="hidden" name="idUnite" value="'.$dataOneV[0]['idVehicule'].'">
@@ -85,8 +94,6 @@ foreach ($dataDotationVehicule as $key) {
     &thinsp; <strong>Dé d\'explosion:</strong>&thinsp; '.$explosion[$key['dExplosive']]['texte'].'
     </li>';
   }
-
-
   $requetteSQL = "SELECT `reglesSpeciales`.`nomRS` FROM `RSArme`
   INNER JOIN `reglesSpeciales` ON `RSArme`.`id_RS` = `reglesSpeciales`.`idRS`
   WHERE `id_arme` =".$key['idArme'];
@@ -101,13 +108,8 @@ foreach ($dataDotationVehicule as $key) {
     foreach ($dataRS as $listing) {
     echo '<li>  &thinsp;'.$listing['nomRS'].'&thinsp;</li>';
   }
-
-
   }
-
-
   echo '</ul></ul>';
 }
-
 ?>
 </div>

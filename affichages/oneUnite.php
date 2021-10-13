@@ -1,5 +1,6 @@
 
-  <figcaption><h3>Fiche de l'unité</h3></figcaption>
+
+<h3>Fiche de l'unité</h3>
 <?php
 include 'stockage/typeTroupe.php';
 include 'stockage/de.php';
@@ -8,8 +9,13 @@ include 'stockage/gabarit.php';
 include 'stockage/sauvegarde.php';
 include 'stockage/pointDeVie.php';
 if (!empty($dataOneU)) {
-echo '<div class="boxePresentation">
-<h3>Nom de la figurine : '.$dataOneU[0]['nomFigurine'].'</h3>
+echo '<div class="boxePresentation">'; ?>
+  <form class="conteneur_row" action="gestionDB/edit/fixeUnite.php" method="post">
+    <h4>Verrouillage de la fiche</h4>
+  <input type="hidden" name="idUnite" value="<?php echo $dataOneU[0]['idUnite']; ?>">
+  <input type="hidden" name="fixer" value="1"><button class="buttonGestionLore" type="submit" name="button"><i class="fas fa-tint"></i></button>
+  </form>
+<?php echo '<h3>Nom de la figurine : '.$dataOneU[0]['nomFigurine'].'</h3>
 <ul class="listeVehicule">
 <li><strong>Faction de l\'unité:</strong> '.$dataOneU[0]['nomFaction'].'</li>';
 echo '
@@ -37,8 +43,8 @@ if ($key['type'] == 1) {
     <strong>Puissance:</strong>  &thinsp;'.$key['puissance'].$typeDe[$dataOneU[0]['DC']]['de'].'
     ';
     if ($key['sort'] == 1) {echo '- sort -';}
-
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5)).' points
+    $Valeur = $key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5);
+    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.round($Valeur, 0).' points
     &thinsp;<form action="gestionDB/del/armeUnite.php" method="post">
     <input type="hidden" name="idDotation" value="'.$key['idDotation'].'">
     <input type="hidden" name="idUnite" value="'.$dataOneU[0]['idUnite'].'">
@@ -57,7 +63,8 @@ if ($key['type'] == 2) {
     if ($key['couverture'] == 1) {echo '- Couverture - Cadence de tir = '.$key['cadence'];}
     if ($key['sort'] == 1) {echo ', - sort';}
 
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5)).' points
+    $Valeur = $key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5);
+    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.round($Valeur, 0).' points
     &thinsp;<form action="gestionDB/del/armeUnite.php" method="post">
     <input type="hidden" name="idDotation" value="'.$key['idDotation'].'">
     <input type="hidden" name="idUnite" value="'.$dataOneU[0]['idUnite'].'">
@@ -75,8 +82,8 @@ if ($key['type'] == 3) {
     if ($key['assaut'] == 1) {echo '- assaut';}
     if ($key['couverture'] == 1) {echo '- Couverture - Cadence de tir = '.$key['cadence'];}
     if ($key['sort'] == 1) {echo ', - sort';}
-
-    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.intval($key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5)).' points
+    $Valeur =  $key['valeur']*$key['puissance']*(($typeDe[$dataOneU[0]['DC']]['prix'])/5.5);
+    echo ' / <strong>Valeur de l\'arme pour la figurine:</strong> &thinsp;'.round($Valeur, 0).' points
     &thinsp;<form action="gestionDB/del/armeUnite.php" method="post">
     <input type="hidden" name="idDotation" value="'.$key['idDotation'].'">
     <input type="hidden" name="idUnite" value="'.$dataOneU[0]['idUnite'].'">

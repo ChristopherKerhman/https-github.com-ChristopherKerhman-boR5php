@@ -2,7 +2,7 @@
   <?php include 'gestionDB/read/listeUser.php';
   foreach ($dataListe as $key) {
     if ($key['valide'] == 1) {
-    echo '<li ><a class="lienNav" href="doter.php?id='.$key['idListeArmee'].'">'.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'</a></li>';
+    echo '<li ><a class="lienNav" href="doter.php?id='.$key['idListeArmee'].'">'.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].'</a></li>';
     }
   }
   ?>
@@ -20,7 +20,7 @@
      $ok = '<i class="fas fa-cloud"></i>';
    }
 
-    echo '<li >'.$ok.' '.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'
+    echo '<li >'.$ok.' '.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].'
     <a class="lienNav" href="gestionDB/edit/valideListe.php?id='.$key['idListeArmee'].'">Invalider</a></li>';}
   }
   ?>
@@ -31,7 +31,7 @@
   foreach ($dataListe as $key) {
       if ($key['valide'] == 0){
          $ok = '<i class="fas fa-cloud"></i>';
-    echo '<li >'.$ok.'  '.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].' Valeur : '.$key['valeurListe'].'
+    echo '<li >'.$ok.'  '.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].'
     <a class="lienNav" href="gestionDB/edit/valideListe.php?id='.$key['idListeArmee'].'">Valider</a></li>';}
   }
   ?>

@@ -1,6 +1,5 @@
 <?php
 $autorisation = 1;
-$requetteSQL = "";
 include '../../restriction/session.php';
 include '../identifiantDB.php';
 include '../controleFormulaires.php';
@@ -19,8 +18,8 @@ $dataDoublon = $data->fetchAll();
 if (empty($dataDoublon)) {
   $token = rand(100000,999999);
     $to = $emailUSer;
-    $subject = 'Votre token de sécurité';
-    $message = 'Token de sécurité'.$token;
+    $subject = 'Votre token de securite';
+    $message = 'Token de securite :'.$token;
     $headers = 'From: aresh_e430@ludis-r5.fr';
       if (mail($to, $subject, $message, $headers)) {
         $emailUSer = filter($_POST['emailUSer']);

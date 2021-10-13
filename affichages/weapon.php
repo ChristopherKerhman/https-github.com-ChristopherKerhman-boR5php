@@ -72,7 +72,11 @@ function yes($data) {
 
      ?></td>
     <td><?php echo intval($dataWeapon[0]['valeur']); ?></td>
-    <td><?php echo $yes[$dataWeapon[0]['verrou']]['texte'] ?></td>
+    <td><?php echo '<form  action="gestionDB/edit/verrouWeapon.php" method="post">
+                <input type="hidden" name="verrou" value="1" />
+                <input type="hidden" name="idArme" value="'.$dataWeapon[0]['idArme'].'">
+                 <button class="buttonGestionLore" type="submit" name="button"><i class="fas fa-tint"></i></button>
+              </form>'; ?></td>
    </tr>
  </table>
 <h3>Les règles spécial déjà affecté à cette arme</h3>

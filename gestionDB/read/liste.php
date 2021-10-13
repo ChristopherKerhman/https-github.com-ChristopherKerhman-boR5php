@@ -2,12 +2,20 @@
 include 'gestionDB/controleFormulaires.php';
 include 'gestionDB/identifiantDB.php';
 $idListe = filter($_GET['idListe']);
-$requetteSQL = "SELECT `nomListe`, `valeurListe` FROM `listeArmee` WHERE  `idListeArmee` = :idListe";
+$requetteSQL = "SELECT `nomListe`, `valeurListe` FROM `listeArmee` WHERE  `idListeArmee` = :idListe;";
 include 'gestionDB/readDB.php';
 $data->bindParam(':idListe', $idListe);
 $data->execute();
 $data->setFetchMode(PDO::FETCH_ASSOC);
 $dataListeName = $data->fetchAll();
+//PC Liste
+$requetteSQL = "SELECT  SUM(`PC`) AS `totalPC` FROM `doterListeArmee` WHERE `idListe` = :idListe";
+$data = $conn->prepare($requetteSQL);
+$data->bindParam(':idListe', $idListe);
+$data->execute();
+$data->setFetchMode(PDO::FETCH_ASSOC);
+$TotalPC = $data->fetchAll();
+//PC Liste
 $requetteSQL = "SELECT `idDotationListe`, `idListe`, `id_Unite`, `nbr`, `TotalValeur`, `nomFigurine`
 FROM `doterListeArmee`
 INNER JOIN `unites` ON `doterListeArmee`.`id_Unite` = `unites`.`idUnite`

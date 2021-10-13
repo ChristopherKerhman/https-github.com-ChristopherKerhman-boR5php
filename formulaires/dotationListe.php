@@ -1,5 +1,6 @@
 <article class="box marge">
 <?php
+  include 'stockage/typeTroupe.php';
   $idFaction = $dataListe[0]['id_faction'];
   $requetteSQL = "SELECT `idUnite`, `nomFigurine`, `typeTroupe`, `DQM`, `DC`, `sauvegarde`, `pointDeVie`, `valeurUnite`
   FROM `unites`
@@ -20,12 +21,14 @@
     echo  '
       <ul class="listBox">
         <li><strong>Nom unite :</strong> '.$key['nomFigurine'].' <strong>Valeur :</strong> '.round($key['valeurUnite'], 0).' points</li>
+        <li><strong>Type de troupe : </strong>'.$typeTroupe[$key['typeTroupe']]['troupe'].'</li>
         <li><strong>DQM :</strong> '.$typeDe[$key['DQM']]['de'].' <strong>DC :</strong> '.$typeDe[$key['DC']]['de'].'</li>
         <li><strong>Armure :</strong> '.$sauvegarde[$key['sauvegarde']]['message'].' - '.$sauvegarde[$key['sauvegarde']]['Type'].'</li>
         <li><strong>Point de vie :</strong> '.$pdv[$key['pointDeVie']]['pdv'].'</li>
         <li><a class="lienNav" href="fichesUnite.php?id='.$key['idUnite'].'">Voir fiche '.$key['nomFigurine'].'</a></li>
         <li>
           <form action="gestionDB/record/addList.php" method="post">
+          <input type="hidden" name="pc" value="'.$typeTroupe[$key['typeTroupe']]['pc'].'" />
           <input type="hidden" name="idListe" value="'.$dataListe[0]['idListeArmee'].'">
           <input type="hidden" name="id_Unite" value="'.$key['idUnite'].'">
           <input type="hidden" name="valeur" value="'.$key['valeurUnite'].'">
@@ -71,6 +74,7 @@ $dataVehicules = $data->fetchAll();
       <li><a class="lienNav" href="ficheVehicule.php?id='.$key['idVehicule'].'">Voir fiche '.$key['nomVehicule'].'</a></li>
       <li>
         <form action="gestionDB/record/addList.php" method="post">
+        <input type="hidden" name="pc" value="0" />
         <input type="hidden" name="idListe" value="'.$dataListe[0]['idListeArmee'].'">
         <input type="hidden" name="id_Unite" value="'.$key['idVehicule'].'">
         <input type="hidden" name="valeur" value="'.$key['valeur'].'">

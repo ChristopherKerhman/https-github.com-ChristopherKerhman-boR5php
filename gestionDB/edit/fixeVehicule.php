@@ -16,9 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   include '../readDB.php';
   $data->bindParam(':id', $idUnite);
   $data->execute();
-  print_r($requetteSQL);
-  echo '<br />';
-  print_r($fixer);
  header('location:../../gestionVehicule.php');
 } else {
     header('location:../../index.php');
