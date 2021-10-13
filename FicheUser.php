@@ -28,6 +28,7 @@ include 'gestionDB/read/adminProfilUser.php';
       <li><strong>Univers encore à créer :</strong> <?php echo $dataProfil[0]['createur']; ?></li>
       <li><strong>Nombre d'univers créer :</strong> <?php echo $dataNRBU[0]['totalU']; ?> </li>
       <li><strong>Accepter la RGPD :</strong> <?php echo $yes[$dataProfil[0]['consentementUser']]['texte']; ?> </li>
+      <li><strong>Compte valide :</strong> <?php echo $yes[$dataProfil[0]['consentementUser']]['texte']; ?> </li>
     </ul>
   </article>
   <article class="conteneur_row">
@@ -53,6 +54,16 @@ include 'gestionDB/read/adminProfilUser.php';
       </select>
         <input type="hidden" name="idUser" value="<?php echo $dataProfil[0]['idUser']; ?>" >
         <input type="hidden" name="addU" value="2" >
+      <button class="buttonGestionLore" type="submit" name="Submit">Mettre à jour</button>
+    </form>
+    <form action="gestionDB/edit/upDateFiche.php" method="post">
+      <label for="AddU"><h4>Bloquer le compte ?</h4></label>
+      <select class="sizeInpute" name="valide">
+        <option value="1">Non</option>
+        <option value="0">Oui</option>
+      </select>
+        <input type="hidden" name="idUser" value="<?php echo $dataProfil[0]['idUser']; ?>" >
+        <input type="hidden" name="addU" value="3" >
       <button class="buttonGestionLore" type="submit" name="Submit">Mettre à jour</button>
     </form>
   </article>

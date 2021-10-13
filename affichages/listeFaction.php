@@ -5,6 +5,7 @@
     <th>Nom faction</th>
     <th>Changer faction</th>
     <th>Modifier</th>
+    <th>Effacer</th>
   </tr>
 <?php
 include 'gestionDB/read/factions.php';
@@ -18,6 +19,9 @@ foreach ($dataFaction as $key) {
     <input type="hidden" name="idFaction" value="'.$key['idFaction'].'">
     <td><input class="sizeInpute" type="text" name="nomFaction" value="'.$key['nomFaction'].'" size="20"></td>
     <td><button class="buttonGestionLore" type="submit" name="button">modifier</button></td></form>
+    <form action="gestionDB/del/faction.php" method="post">
+    <input type="hidden" name="idFaction" value="'.$key['idFaction'].'">
+    <td><button class="buttonGestionLore" type="submit" name="button"><i class="fas fa-trash-alt"></i></button></td></form>
   </tr>';
 }
  ?>

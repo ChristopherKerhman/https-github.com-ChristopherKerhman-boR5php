@@ -23,6 +23,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
   $data->bindParam(':tiper', $tiper);
   $data->execute();
   }
+  // Modification Tiper
+  if (filter($_POST['addU']) == 3) {
+  $valide = filter($_POST['valide']);
+  $requetteSQL = "UPDATE `users` SET `consentementUser`= :valide WHERE `idUser` = :id";
+  include '../readDB.php';
+  $data->bindParam(':id', $idUser);
+  $data->bindParam(':valide', $valide);
+  $data->execute();
+  }
 
   header('location:../../FicheUser.php?idUser='.$idUser.'');
 } else {
