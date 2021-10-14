@@ -25,9 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $vol = filter($_POST['vol']);
   $station = filter($_POST['station']);
   $valeurMouvement = log($deplacement) + $vol + $station;
-  $valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix']) * $pointDeVie) * $sauvegarde[$svg]['prix'];
+$valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix']) * ($pointDeVie + 2)) * $sauvegarde[$svg]['prix'];
   if ($typeF == '6') {
     $niveauMage = filter($_POST['niveauMage']);
+    $valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix'] + $niveauMage) * ($pointDeVie + 2)) * $sauvegarde[$svg]['prix'];
     $requetteSQL = "UPDATE `unites` SET `nomFigurine`= :nomFigurine,`Description`= :Description,`typeTroupe`=:typeTroupe,`taille`= :taille,`niveauMage`=:niveauMage,`deplacement`=:deplacement,
     `course`=:course,`vol`=:vol,`station`=:station,`DQM`=:DQM,`DC`=:DC,`sauvegarde`=:sauvegarde,`pointDeVie`=:pdv,`valeurUnite`=:valeur
     WHERE `idUnite`=:id;

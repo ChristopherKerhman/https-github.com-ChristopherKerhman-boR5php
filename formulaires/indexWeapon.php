@@ -1,3 +1,4 @@
+<article class="conteneur_col">
 <h3>Les armes créer sur R5 et disponible dans les listes</h3>
   <?php
   // Paramètre de limite
@@ -29,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }
   ?>
-<ul class="listSimple">
+<ul class="listBox">
 <?php
 if (empty($listeWeapon)) {
 $requetteSQL = "SELECT `idArme`, `nomArme`, `nomUnivers` FROM `armes`
@@ -64,3 +65,4 @@ $requetteSQL = "SELECT `idArme`, `nomArme`, `nomUnivers` FROM `armes`
   </form>
 
 </div>
+</article>

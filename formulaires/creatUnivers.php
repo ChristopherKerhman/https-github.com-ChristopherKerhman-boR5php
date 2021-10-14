@@ -1,13 +1,6 @@
-<?php
-// Vérification si l'utilisateur enregistrer est bien créateur
-if($_SESSION['createur'] >= 1) {
-  $ok = "true";
-} else {
-  $ok = "false";
-}
- ?>
  <div id="VERROUBOOL">
    <article v-show="cle">
+     <button class="buttonGestionLore" type="button" name="button" v-on:click="cle = false">Afficher les univers déjà créer</button>
        <h3>Création d'un nouvelle univers ?</h3>
        <p>Il vous reste <?php echo $_SESSION['createur'] ?> univers à créer.</p>
      <form class="conteneur_col" action="gestionDB/record/addMultivers.php" method="post">
@@ -20,6 +13,7 @@ if($_SESSION['createur'] >= 1) {
    </form>
    </article>
    <article v-show="!cle">
+     <button class="buttonGestionLore" type="button" name="button" v-on:click="cle = true">Afficher les univers restant à créer</button>
     <?php include 'affichages/listeUnivers.php'; ?>
    </article>
  </div>

@@ -2,7 +2,7 @@
   const VERROUBOOL = Vue.createApp({
     data () {
       return {
-      cle: <?php echo $ok; ?>
+      cle: true
       }
     }
   })

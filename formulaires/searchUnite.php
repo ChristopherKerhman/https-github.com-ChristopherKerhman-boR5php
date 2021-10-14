@@ -13,7 +13,12 @@ include 'stockage/pointDeVie.php';
       }
     ?>
   </select>
-<button class="classique" type="submit" name="button">Rechercher des unité</button>
+<?php if($mage == 0) {
+  echo '<button class="classique" type="submit" name="button">Rechercher des unités</button>';
+} else {
+  echo '<button class="classique" type="submit" name="button">Rechercher des Mages</button>';
+}
+ ?>
 </form>
 <?php
 include 'gestionDB/controleFormulaires.php';

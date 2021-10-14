@@ -22,7 +22,7 @@ if (!isset($_SESSION['role']) || ($_SESSION['role'] == 0)) {
   $dataTraiter = $data->fetchAll();
  ?>
 <ul class="listRow">
-    <li class="conteneur_menu"><a class="lienNav" href="Findex.php">Les publications</a></li>
+    <li class="conteneur_menu"><a class="lienNav" href="Findex.php"><i class="fas fa-journal-whills"></i> Les publications</a></li>
   <?php
   if (isset($_SESSION['login'])) {
       echo '<li class="conteneur_menu"> <a class="lienNav" href="librairie/r5.zip">Télécharger R5</a></li>';

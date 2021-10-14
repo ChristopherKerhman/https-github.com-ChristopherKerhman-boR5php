@@ -1,5 +1,3 @@
-
-
 <h3>Fiche de l'unité</h3>
 <?php
 include 'stockage/typeTroupe.php';
@@ -108,6 +106,9 @@ foreach ($dataRS as $listing) {
 }
 echo '</ul></ul>';
   }
+  if ($dataOneU[0]['niveauMage'] > 0) {
+   include 'sortGenerique.php';
+ }
   echo '</div>';
 }
 ?>

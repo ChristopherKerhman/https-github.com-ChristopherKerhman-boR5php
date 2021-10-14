@@ -31,10 +31,11 @@ $svg = filter($_POST['sauvegarde']);
 $vol = filter($_POST['vol']);
 $station = filter($_POST['station']);
 $valeurMouvement = log($deplacement) + $vol + $station;
-$valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix']) * $pointDeVie) * $sauvegarde[$svg]['prix'];
+$valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix']) * ($pointDeVie + 2)) * $sauvegarde[$svg]['prix'];
 // Si c'est un mage
 if ($typeF == '6') {
   $niveauMage = filter($_POST['niveauMage']);
+  $valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix'] + $niveauMage) * ($pointDeVie + 2)) * $sauvegarde[$svg]['prix'];
   $requetteSQL = "INSERT INTO `unites`(`idP`, `id_faction`, `nomFigurine`, `Description`, `typeTroupe`, `taille`, `niveauMage`, `deplacement`, `course`, `DQM`, `DC`, `sauvegarde`, `pointDeVie`, `vol`, `station`, `valeurUnite`)
   VALUES (:idP, :id_faction, :nomFigurine, :Description, :typeTroupe, :taille, :niveauMage, :deplacement, :course, :DQM, :DC, :sauvegarde, :pointDeVie, :vol, :station, :valeur)";
   include '../readDB.php';

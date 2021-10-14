@@ -18,7 +18,13 @@ $dataUser = $data->fetchAll();
   foreach ($dataUser as $key) {
     $score = 0;
     if ($key['tiper'] == 1) {
-      $score = 5;
+      $requetteSQL = "SELECT COUNT(`tiper`) AS `total` FROM `users` WHERE `tiper` = 1";
+      $data = $conn->prepare($requetteSQL);
+      $data->bindParam(':id', $key['idUser']);
+      $data->execute();
+      $data->setFetchMode(PDO::FETCH_ASSOC);
+      $data = $data->fetchAll();
+      $score = $data[0]['total'];
     }
     // Score Univers
     $requetteSQL = "SELECT COUNT(`nomUnivers`) AS `total` FROM `multivers` WHERE `idAuteur` = :id";

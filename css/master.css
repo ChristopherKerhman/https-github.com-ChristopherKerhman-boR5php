@@ -150,6 +150,9 @@ h4 {
 .left {
   text-align: left;
 }
+.size {
+  width: 50%;
+}
 #conteneur_row_resolution {
   display: flex;
   flex-direction: row;

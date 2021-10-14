@@ -11,8 +11,8 @@ $dataUser = $data->fetchAll();
  ?>
 <section>
   <article>
-    <h4>Merci aux tipers de faire vivre de site et participé au frais de mise en ligne</h4>
-    <ul class="listSimple">
+    <h4>Merci aux tipers de faire vivre le site et participer au frais de mise en ligne</h4>
+    <ul class="listTipeur ">
       <?php foreach ($dataUser as $key) {
         echo '<li><strong class="famous">'.$key['login'].'</strong></li>';
       } ?>
