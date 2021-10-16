@@ -9,7 +9,6 @@ include 'header.php';
   include 'gestionDB/read/monoUnite.php';
   include 'affichages/oneUniteFiche.php';
   ?>
-
 </section>
 <?php
   include 'footer.php';

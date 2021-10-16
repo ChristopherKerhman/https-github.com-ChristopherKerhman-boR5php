@@ -81,6 +81,9 @@ foreach ($dataRS as $listing) {
 }
 echo '</ul></ul>';
   }
+  if ($dataOneU[0]['niveauMage'] > 0) {
+   include 'AffichageSortGenerique.php';
+ }
   echo '</div>';
 }
 ?>

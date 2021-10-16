@@ -251,6 +251,11 @@ h4 {
 section {
   max-width: 95%;
 }
+.titreNT {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;
+    font-style: italic;
+}
 /*==Formulaire==*/
 label {
     font-family: 'Russo One', sans-serif;

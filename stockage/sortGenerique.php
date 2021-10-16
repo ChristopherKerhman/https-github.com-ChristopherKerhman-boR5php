@@ -40,7 +40,7 @@ $sort = [
   'niveau' => 3, 'prix' => 15],
   ['index' => 13, 'nom' => 'Téléportation d’unité', 'description' => 'Le Mage peut téléporter une unité (jusque 12 combattants) jusque 24 pouces de sa position. L’unité disparaît lors de la mise en route du sort et réapparais au début du tour
   suivant là où le désir le joueur qui contrôle le Mage. En cas d’échec, l’unité disparaît simplement et ne réapparaîtra plus de la partie. Cela peut aussi être 1 véhicule.', 'niveau' => 3, 'prix' => 6],
-  ['index' => 13, 'nom' => 'Tricher avec le hasard', 'description' => 'Le Mage peut lancer ce sort et il aura une influence durant tout le tour en cours. Le joueur peut alors relancer 1 fois, tous les jets de dés de ces unités en DC ou en DQM.
+  ['index' => 14, 'nom' => 'Tricher avec le hasard', 'description' => 'Le Mage peut lancer ce sort et il aura une influence durant tout le tour en cours. Le joueur peut alors relancer 1 fois, tous les jets de dés de ces unités en DC ou en DQM.
   Le Mage inspire tellement les unités combattantes qu’elles deviennent super performante pendant ce laps de temps.',
   'niveau' => 3, 'prix' => 14],
 ];

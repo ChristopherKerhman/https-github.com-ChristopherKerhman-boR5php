@@ -180,6 +180,12 @@ h4 {
 .left {
   text-align: left;
 }
+.largeur1{
+  width: 30%;
+}
+.justify {
+  text-align: justify;
+}
 #conteneur_row_resolution {
   display: flex;
   flex-direction: row;
@@ -225,6 +231,14 @@ h4 {
     text-align: left;
     margin-right: 1em;
     margin-left: 1em;
+}
+.listRSPublication {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
 }
 .listRow {
     list-style: none;

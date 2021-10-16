@@ -13,7 +13,7 @@
 <div id="RGPD" class="conteneur_col">
   <div>
     <?php if (isset($_GET['error1'])){ echo '<p>'.$_GET['error1'].'</p>'; } ?>
-    <label for="conditionRGPD">Acceptez-vous les conditions de la <strong v-if="!seeRGPD" class="black" v-on:click="seeRGPD = true">RGPD</strong><strong v-else class="red" v-on:click="seeRGPD = false">RGPD</strong> ?</label>
+    <label for="conditionRGPD" class="lienNav">Acceptez-vous les conditions de la <strong v-if="!seeRGPD" v-on:click="seeRGPD = true">RGPD et de la Charte de bonne conduite </strong><strong v-else v-on:click="seeRGPD = false">RGPD et de la Charte de bonne conduite </strong> ?</label>
     <input id="conditionRGPD" type="checkbox" name="consentementUser">
   </div>
     <div class="zone" v-show="seeRGPD">
@@ -23,6 +23,8 @@
       Chaque années nous vous demanderont un renouvellement de votre consentement à conserver ces données dans nos bases de données.
       L'inscription à ce site nécessite que vous acceptiez les conditions de la RGPD. Vous pourrez à tout moment, les refusez, via votre profil. A ce moment là, votre compte ne sera plus visible en publique.<br />
       <a class="lienNav" href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX%3A32016L0680&from=FR">Vers le texte sur la RGPD</a>
+    </p>
+  <?php include 'stockage/chartes.php'; ?>
     </p>
   </div>
 </div>

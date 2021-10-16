@@ -2,7 +2,8 @@
   const VERROU = Vue.createApp({
     data () {
       return {
-      cle: false
+      cle: false,
+      chartes: false
       }
     }
   })

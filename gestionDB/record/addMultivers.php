@@ -5,9 +5,9 @@ include '../../restriction/session.php';
 include '../identifiantDB.php';
 include '../controleFormulaires.php';
 // Contrôle autorisation au cas où l'utilisateur n'a pas d'autorisation pour créer un univers.
-if($_SESSION['createur'] == 0) {
+if ($_SESSION['createur'] == 0) {
   header('location:../../index.php');
-}
+} else {
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
   if($_POST['nomUnivers'] == '') {
     header('location:../../createUnivers.php?error4="Nom de votre univers vide"');
@@ -35,5 +35,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 } else {
   header('location:../../index.php');
+}
 }
  ?>

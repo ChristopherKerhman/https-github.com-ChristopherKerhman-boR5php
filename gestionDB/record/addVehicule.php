@@ -58,7 +58,7 @@ $data->bindParam(':svg', $svg);
 $data->bindParam(':pointStructure', $pointStructure);
 $data->bindParam(':valeur', $valeur);
 $data->execute();
-header('location:../../troupes.php');
+header('location:../../vehicules.php');
 } else {
   header('location:../../index.php');
 }

@@ -50,7 +50,16 @@ function brassageDate($data) {
     </div>
   </article>
   <article v-else>
-    <a class="lienNav" v-on:click="cle = true">Securité du compte</a>
+    <a class="lienNav" v-on:click="cle = true">Securité du compte</a><br />
+    <a v-if="!chartes" class="lienNav" v-on:click="chartes = true"><i class="fas fa-door-open"></i> Chartes de bonne conduite</a><a v-else class="lienNav" v-on:click="chartes = false"><i class="fas fa-door-closed"></i> Chartes de bonne conduite</a>
+  </article>
+  <article v-if="chartes" class="paragraphe">
+    <?php if($dataProfil[0]['consentementUser'] == 1) {
+      echo '<h4>Vous avez signé la chartes de bonne conduite le '.brassageDate($dataProfil[0]['dateInscription']).' lors de votre inscription.</h4>';
+    } else {
+      echo '<h4>Vous n\'avez pas signé la chartes de bonne conduite.</h4>';
+    } ?>
+  <?php include 'stockage/chartes.php'; ?>
   </article>
 </div>
     <br />
