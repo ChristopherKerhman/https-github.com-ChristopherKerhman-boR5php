@@ -2,7 +2,10 @@
 //$autorisation = 1;
 include 'header.php';
 ?>
-<?php   if(isset($_GET['message42'])) {echo $_GET['message42'];} ?>
+<?php   if(isset($_GET['message42'])) {echo $_GET['message42'];}
+//echo $_SERVER['REMOTE_ADDR'];
+
+?>
 <section class="conteneur_row" id="indexBox">
   <?php
    include 'formulaires/indexWeapon.php';

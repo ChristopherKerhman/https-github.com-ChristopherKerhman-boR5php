@@ -1,13 +1,6 @@
 <?php
 // Fonction pour brasser la date
-function brassageDate($data) {
-  $date = $data;
-  $year = substr($date,0,4);
-  $month = substr($date,5,2);
-  $day = substr($date,8,2);
-  $date = $day.'/'.$month.'/'.$year;
-  return $date;
-}
+include 'stockage/brassageDate.php';
  ?>
  <!--Element pour créer la présentation des textes.-->
  <script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>

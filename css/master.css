@@ -630,7 +630,17 @@ text-align: center;
   color: #2e3134;
   text-decoration: underline;
 }
+
 .lienNav:hover {
+  color: #42b983;
+}
+.page {
+  font-family: 'Russo One', sans-serif;
+  color: #2e3134;
+  text-decoration: underline;
+  padding-right: 0.5em;
+}
+.page:hover {
   color: #42b983;
 }
 .lienInfo {

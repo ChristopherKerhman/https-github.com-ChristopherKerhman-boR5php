@@ -19,8 +19,22 @@ if(($_SERVER['REQUEST_METHOD'] === 'POST') && ((!empty($_POST['login']) && (!emp
     $_SESSION['createur'] = $dataTraiter[0]['createur'];
     $_SESSION['contributeur'] = $dataTraiter[0]['contributeur'];
     $_SESSION['consentementUser'] = $dataTraiter[0]['consentementUser'];
+    $ok = $dataTraiter[0]['consentementUser'];
+    $requetteSQL = "INSERT INTO `journaux`(`ip_client`, `idUser`, `login`, `connexionOk`) VALUES (:ip, :idUser, :login, :ok)";
+    $data = $conn->prepare($requetteSQL);
+    $data->bindParam(':ip', $_SERVER['REMOTE_ADDR']);
+    $data->bindParam(':idUser', $dataTraiter[0]['idUser']);
+    $data->bindParam(':login', $login);
+    $data->bindParam(':ok', $ok);
+    $data->execute();
     header('location:../../index.php');
   } else {
+    $ok = 0;
+    $requetteSQL = "INSERT INTO `journaux`(`ip_client`, `connexionOk`) VALUES (:ip, :ok)";
+    $data = $conn->prepare($requetteSQL);
+    $data->bindParam(':ip', $_SERVER['REMOTE_ADDR']);
+    $data->bindParam(':ok', $ok);
+    $data->execute();
     header('location:../../connexionUser.php?error2="login ou mot de passe incorrecte"');
   }
 } else {

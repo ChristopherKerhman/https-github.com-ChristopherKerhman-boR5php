@@ -20,8 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titre = filter($_POST['titreLore']);
     $article = filter_Texte($_POST['articleLore']);
     $niveau = filter($_POST['niveauPublication']);
-    $requetteSQL = "INSERT INTO `lore`(`idAuteur`, `idMultivers`, `titreLore`, `articleLore`, `valide`, `niveauPublication`) VALUES (:idAuteur, :idMultivers, :titre, :article, :valide, :niveau)";
+    $requetteSQL = "INSERT INTO `lore`(`idAuteur`, `idMultivers`, `titreLore`, `articleLore`, `valide`, `niveauPublication`, `ip-auteur`) VALUES (:idAuteur, :idMultivers, :titre, :article, :valide, :niveau, :ip)";
     include '../readDB.php';
+    $data->bindParam(':ip', $_SERVER['REMOTE_ADDR']);
     $data->bindParam(':idAuteur', $idAuteur);
     $data->bindParam(':idMultivers', $idMultivers);
     $data->bindParam(':titre', $titre);

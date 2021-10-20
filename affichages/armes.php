@@ -27,7 +27,7 @@ echo
   <th>Sort</th>
   <th>Valeur</th>
   <th>Ajouter une régle spécial</th>
-  <th>Supprimer l'arme</th>
+  <th>Supprimer</th>
   <th>Verrouillage</th>
   </tr>";
 }
@@ -74,7 +74,8 @@ if (!empty($dataWeapon)) {
           echo '</td>
           <td><form  action="gestionDB/del/weapon.php" method="post">
             <input type="hidden" name="idArme" value="'.$key['idArme'].'">
-             <button class="buttonGestionLore" type="submit" name="button">Effacer</button>
+            <input type="hidden" name="verrou" value="'.$key['verrou'].'" />
+             <button class="buttonGestionLore" type="submit" name="button"><i class="fas fa-trash-alt"></i></button>
           </form></td>';
           if ($key['verrou'] == 0) {
             echo '<td><form  action="gestionDB/edit/verrouWeapon.php" method="post">

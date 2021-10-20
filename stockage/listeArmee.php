@@ -10,6 +10,7 @@
 <body class="publication">
 <section class="leftPublication">
   <h3>Liste : <?php echo $dataListeName[0]['nomListe'].' - Valeur : '.$dataListeName[0]['valeurListe'].' Points'; ?> - Point de Commandement total : <?php echo round($TotalPC[0]['totalPC'], 0); ?> </h3>
+  <p><strong>Tolérance liste adverse</strong> : <?php $tolerance = ceil($dataListeName[0]['valeurListe'] * 0.01); echo '+ / - '.$tolerance.' points'; ?></p>
 <?php
 //Read liste Unite
 if (!empty($dataListeUnite)) {
@@ -177,7 +178,7 @@ foreach ($dataWeaponV as $gun) {
   echo '.';
   // Fin de l'extraction des règles spécial
 }
-echo '<li><br /></li><li><strong>Sauvegarde :</strong> '.$blindage[$dataVehicule[0]['svg']]['svg'].' <strong>Point de Structure :</strong> '.$structure[$dataVehicule[0]['pointStructure']]['ps'].'</li></ul>';
+echo '<li><br /></li><li><strong>Sauvegarde :</strong> '.$blindage[$dataVehicule[0]['svg']]['svg'].' <strong>Point de Structure :</strong> '.$structure[$dataVehicule[0]['pointStructure']]['ps'].' points</li></ul>';
 //Fin
 }
 ?>

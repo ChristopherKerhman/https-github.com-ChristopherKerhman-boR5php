@@ -14,11 +14,29 @@ $dataUser = $data->fetchAll();
     <h4>Merci aux tipers de faire vivre le site et participer au frais de mise en ligne</h4>
     <ul class="listTipeur ">
       <?php foreach ($dataUser as $key) {
-        echo '<li><strong class="famous">'.$key['login'].'</strong></li>';
+        echo '<li class="famous">'.$key['login'].'</li>';
       } ?>
     </ul>
   </article>
+<div id="VERROU">
+  <article v-if="cle">
+
+
+  </article>
+</div>
+
 </section>
+<script>
+  const VERROU = Vue.createApp({
+    data () {
+      return {
+      cle: false
+      }
+    }
+  })
+  VERROU.mount('#VERROU')
+</script>
+
  <?php
    include 'footer.php';
  ?>
