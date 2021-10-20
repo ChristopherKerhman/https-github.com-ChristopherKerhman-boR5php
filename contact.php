@@ -1,5 +1,4 @@
 <?php
-//$autorisation = 1;
 include 'header.php';
 ?>
 <section class="conteneur_col" id="indexBox">

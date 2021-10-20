@@ -1,5 +1,4 @@
 <?php
-//$autorisation = 1;
 include 'header.php';
 ?>
 <?php   if(isset($_GET['message42'])) {echo $_GET['message42'];}

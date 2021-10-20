@@ -1,5 +1,5 @@
 <?php
-//$autorisation = 1;
+// Sécuristation lier a plusieurs critères.
 include 'header.php';
 ?>
 <section class="conteneur_col" id="indexBox">

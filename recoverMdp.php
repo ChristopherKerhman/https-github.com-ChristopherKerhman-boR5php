@@ -11,8 +11,6 @@
     <button class="classique" type="submit">Lancer la procédure</button>
   </form>
 <?php
-
-
  ?>
 </section>
 <?php
