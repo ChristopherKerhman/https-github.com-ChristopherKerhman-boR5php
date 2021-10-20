@@ -29,7 +29,7 @@ echo'<li><h4>'.$key['nomFigurine'].' - Nombre : '.$key['nbr'].' - Valeur total :
   $dataUnite = $data->fetchAll();
   $idU =  $key['id_Unite'];
   foreach ($dataUnite as $key) {
-    echo '<li><strong>Type de troupe : </strong>'.$typeTroupe[$key['typeTroupe']]['troupe'].' <strong>DQM :</strong> '.$typeDe[$key['DQM']]['de'].' </li>';
+    echo '<li><strong>Taille :</strong> '.$typeFigurine[$key['taille']]['taille'].' <strong>Type de troupe : </strong>'.$typeTroupe[$key['typeTroupe']]['troupe'].' <strong>DQM :</strong> '.$typeDe[$key['DQM']]['de'].' </li>';
     if ($key['typeTroupe'] == 6) {
       echo '<li><strong>Niveau du Mage</strong>: '.$key['niveauMage'].'</li>';
     }
