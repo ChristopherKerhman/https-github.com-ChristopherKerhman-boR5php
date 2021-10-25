@@ -19,6 +19,9 @@
 #nav a.router-link-exact-active {
   color: #679436ff;
 }
+#RS {
+  text-align: center;
+}
 html, body {
 height: 100vh;
 }
@@ -101,6 +104,9 @@ h4 {
   font-weight: 100;
   font-size: 1.2em;
   font-family: 'Russo One', sans-serif;
+}
+.MAJ::first-letter {
+  text-transform: uppercase;
 }
 .margin20 {
   margin-right: 2em;

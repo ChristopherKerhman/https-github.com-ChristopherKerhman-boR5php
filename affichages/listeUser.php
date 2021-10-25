@@ -2,7 +2,7 @@
   <?php include 'gestionDB/read/listeUser.php';
   foreach ($dataListe as $key) {
     if ($key['valide'] == 1) {
-    echo '<li ><a class="lienNav" href="doter.php?id='.$key['idListeArmee'].'">'.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].'</a></li>';
+    echo '<li ><a class="lienNav" href="doter.php?id='.$key['idListeArmee'].'">'.$key['nomListe'].' - Nom univers : '.$key['nomUnivers'].' Nom faction : '.$key['nomFaction'].'</a> <strong>Valeur : '.$key['valeurListe'].' points</strong></li>';
     }
   }
   ?>

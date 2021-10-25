@@ -15,6 +15,15 @@ $CTac = intval($dataOneU[0]['course']);
  ?>
  <h3>Faction de l'unité : <?php echo $dataOneU[0]['nomFaction']; ?></h3>
 <form action="gestionDB/edit/unite.php" method="post">
+  <label for="faction">Changer de faction ?</label>
+  <select class="sizeInpute" name="idFaction">
+  <?php
+
+  foreach ($dataFaction as $key) {
+    echo '<option value="'.$key['idFaction'].'">'.$key['nomUnivers'].' - '.$key['nomFaction'].'</option>';
+  }
+   ?>
+  </select>
   <input type="hidden" name="idUnite" value=" <?php echo $dataOneU[0]['idUnite']; ?>">
 <label for="nom">Nom de l'unité :</label>
   <input class="sizeInpute" type="text" name="nomFigurine" value=" <?php echo $dataOneU[0]['nomFigurine']; ?>">

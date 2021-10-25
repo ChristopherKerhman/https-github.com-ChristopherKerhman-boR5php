@@ -14,9 +14,9 @@ if ($dataTraiter[0]['niveauPublication'] == 2) {
 }
  ?>
 <!--Element pour créer la présentation des textes.-->
-<script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>
+<!--<script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>
 <script type="text/javascript">bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });</script>
-<!--En attendant grapeJS-->
+En attendant grapeJS-->
 
 <article class="conteneur_col">
   <form action="gestionDB/edit/updateLore.php" method="post">

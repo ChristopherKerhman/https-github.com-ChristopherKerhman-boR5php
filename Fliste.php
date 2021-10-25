@@ -2,9 +2,9 @@
 include 'Fheader.php';
 $requetteSQL = "SELECT `idListeArmee`, `nomListe`, `valeurListe`, `nomFaction`
 FROM `listeArmee`
-iNNER JOIN `factions` ON `id_faction` = `idFaction`
+INNER JOIN `factions` ON `id_faction` = `idFaction`
 WHERE `valide` = 1 AND `fixerListe` = 1 AND `id_univers` = :id
-ORDER BY `nomListe` ASC";
+ORDER BY `valeurListe` ASC";
 $data = $conn->prepare($requetteSQL);
 $data->bindParam(':id', $_SESSION['idUniversVisite']);
 $data->execute();

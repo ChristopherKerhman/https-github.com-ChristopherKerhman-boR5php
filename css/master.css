@@ -208,7 +208,7 @@ h4 {
 }
 .listSimple {
     list-style: none;
-    width: 44%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

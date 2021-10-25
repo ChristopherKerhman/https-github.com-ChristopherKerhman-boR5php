@@ -56,7 +56,7 @@ foreach ($dataWeapon as $gun) {
     <strong>Assaut :</strong>'.$yes[$gun['assaut']]['texte'];
     if ($gun['couverture'] == 1) {
       echo '<strong>Couverture</strong>'.$yes[$gun['couverture']]['texte'].'
-      <strong>Cadende de tir :</strong>'.$gun['cadence'];
+      <strong>Cadence de tir :</strong>'.$gun['cadence'];
     }
   }
   if ($gun['type'] == 3) {
@@ -65,7 +65,7 @@ foreach ($dataWeapon as $gun) {
     <strong>Arme lourde :</strong>'.$yes[$gun['lourde']]['texte'].'
     <strong>Assaut :</strong>'.$yes[$gun['assaut']]['texte'];
     if ($gun['couverture'] == 1) {
-      echo '&thinsp;<strong>Couverture</strong>'.$yes[$gun['couverture']]['texte'].'&thinsp;<strong>Cadende de tir :</strong>'.$gun['cadence'];
+      echo '&thinsp;<strong>Couverture</strong>'.$yes[$gun['couverture']]['texte'].'&thinsp;<strong>Cadence de tir :</strong>'.$gun['cadence'];
     }
     echo '&thinsp;<strong>Puissance Explosif :</strong> '.$explosion[$gun['dExplosive']]['texte'].'&thinsp;<strong>Gabarit :</strong> '.$gabarit[$gun['explosif']]['texte'].'';
   }
@@ -147,7 +147,7 @@ foreach ($dataWeaponV as $gun) {
     <strong>Assaut :</strong>'.$yes[$gun['assaut']]['texte'];
     if ($gun['couverture'] == 1) {
       echo '<strong>Couverture</strong>'.$yes[$gun['couverture']]['texte'].'
-      <strong>Cadende de tir :</strong>'.$gun['cadence'];
+      <strong>Cadence de tir :</strong>'.$gun['cadence'];
     }
   }
   if ($gun['type'] == 3) {
@@ -157,7 +157,7 @@ foreach ($dataWeaponV as $gun) {
     <strong>Arme lourde :</strong>'.$yes[$gun['lourde']]['texte'].'
     <strong>Assaut :</strong>'.$yes[$gun['assaut']]['texte'];
     if ($gun['couverture'] == 1) {
-      echo '&thinsp;<strong>Couverture</strong>'.$yes[$gun['couverture']]['texte'].'&thinsp;<strong>Cadende de tir :</strong>'.$gun['cadence'];
+      echo '&thinsp;<strong>Couverture</strong>'.$yes[$gun['couverture']]['texte'].'&thinsp;<strong>Cadence de tir :</strong>'.$gun['cadence'];
     }
     echo '&thinsp;<strong>Puissance Explosif :</strong> '.$explosion[$gun['dExplosive']]['texte'].'&thinsp;<strong>Gabarit :</strong> '.$gabarit[$gun['explosif']]['texte'].'';
   }

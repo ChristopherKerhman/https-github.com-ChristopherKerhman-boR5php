@@ -6,9 +6,11 @@ include 'header.php';
 
 ?>
 <section class="conteneur_row" id="indexBox">
-  <?php
-   include 'formulaires/indexWeapon.php';
-  ?>
+  <article >
+    <?php
+     include 'formulaires/indexWeapon.php';
+    ?>
+  </article>
   <article>
     <?php
     function read($dataSQL) {
@@ -28,7 +30,7 @@ include 'header.php';
       $collection = $data->fetchAll();
       return $collection;
     }
-    $requetteSQL = "SELECT COUNT(`idUser`) AS `totalUser` FROM `users` WHERE `consentementUser` = 1";
+    $requetteSQL = "SELECT COUNT(`idUser`) AS `totalUser` FROM `users` WHERE `consentementUser` = 1 AND `role` = 1";
     $nbrUser = read($requetteSQL);
     $requetteSQL = "SELECT COUNT(`idArme`) AS `totalArme` FROM `armes` WHERE  `verrou` = 1";
     $nbrArme = read($requetteSQL);
@@ -54,8 +56,8 @@ include 'header.php';
     <li><strong>Nombre de liste partagé :</strong> <?php echo $nbrListe[0]['totalListe']; ?> Listes</li>
   </ul>
   </article>
-
 </section>
+
 <?php
   include 'footer.php';
 ?>

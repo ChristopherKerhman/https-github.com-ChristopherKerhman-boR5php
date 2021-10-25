@@ -25,7 +25,7 @@ if (!isset($_SESSION['role']) || ($_SESSION['role'] == 0)) {
     <li class="conteneur_menu"><a class="lienNav" href="Findex.php"><i class="fas fa-journal-whills"></i> Les publications</a></li>
   <?php
   if (isset($_SESSION['login'])) {
-      echo '<li class="conteneur_menu"> <a class="lienNav" href="librairie/r5.zip">Télécharger R5</a></li>';
+      echo '<li class="conteneur_menu"> <a class="lienNav" href="librairie/R-5_WebEdition.zip"><i class="fas fa-file-download"></i> Télécharger R5</a></li>';
       echo '<li class="conteneur_menu"><a class="lienNav" href="profilUser.php"><i class="fas fa-user-check"></i> '.$_SESSION['login'].' Connecter</a></li>';
   }
   foreach ($dataTraiter as $key) {

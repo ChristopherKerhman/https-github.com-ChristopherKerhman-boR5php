@@ -24,7 +24,7 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST') && (!empty($_POST['nomArme'])) &&(!e
   $idCreateur = filter($_POST['idCreateur']);
   $explosif = filter($_POST['explosif']);
   $dExplosive = filter($_POST['dExplosive']);
-  $valeur = (log($rangeMax) + $puissance) + ($sort * 1.5) + ($lourde * 3) + ($assaut *1.5) + ($couverture * log($cadence)) + $gabarit[$explosif]['prix'] + $explosion[$dExplosive]['prix'] + ($vehicule * 5);
+  $valeur = (log($rangeMax) + $puissance) + ($sort * 1.5) + ($lourde * 3) + ($assaut *1.5) + ($couverture * $cadence) + $gabarit[$explosif]['prix'] + $explosion[$dExplosive]['prix'] + ($vehicule * 5);
   $requetteSQL = "INSERT INTO `armes`(`nomArme`, `descriptionArme`, `rangeMax`, `puissance`, `type`, `idCreateur`, `idUnivers`, `valeur`, `sort`, `lourde`, `assaut`, `couverture`, `cadence`, `explosif`, `dExplosive`, `armeVehicule`)
   VALUES (:nomArme, :descriptionArme, :rangeMax, :puissance, :type, :idCreateur, :idUnivers, :valeur, :sort, :lourde, :assaut, :couverture, :cadence, :explosif, :dExplosive, :vehicule)";
   include '../readDB.php';

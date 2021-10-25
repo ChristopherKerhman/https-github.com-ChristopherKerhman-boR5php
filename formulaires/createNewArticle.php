@@ -1,6 +1,6 @@
-<!--Element pour créer la présentation des textes.-->
+<!--Element pour créer la présentation des textes.
 <script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>
-<script type="text/javascript">bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });</script>
+<script type="text/javascript">bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });</script>-->
 <?php
   if (isset($_GET['error5'])){ echo '<p class="avertissement">'.$_GET['error5'].'</p>'; }
   if (isset($_GET['error6'])){ echo '<p class="avertissement">'.$_GET['error6'].'</p>'; }

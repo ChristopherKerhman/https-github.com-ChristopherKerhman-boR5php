@@ -21,11 +21,11 @@ include 'stockage/brassageDate.php';
 </div>
 <div class="conteneur_row">
   <p>
-    Nombre d'univers à créer ? &thinsp;<?php echo $dataProfil[0]['createur']; ?>
+    <strong>Nombre d'univers à créer ?</strong> &thinsp;<?php echo $dataProfil[0]['createur']; ?>
   </p>
 </div>
-<label for="about">A propos de moi :</label>
-<textarea id="about" name="description" rows="8" cols="80"><?php echo $dataProfil[0]['description']; ?></textarea>
+<!---<label for="about">A propos de moi :</label>
+<textarea id="about" name="description" rows="8" cols="80"><?php //echo $dataProfil[0]['description']; ?></textarea>-->
 <p>
   Date d'inscription : <strong><?php echo brassageDate($dataProfil[0]['dateInscription']); ?></strong>
 </p>

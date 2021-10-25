@@ -39,7 +39,7 @@ ORDER BY `nomArme` ASC";
     echo 'Pas d\'élément dans cette catégorie.';
   } else {
     foreach ($dataArmesU as $key) {
-      echo '<a class="lienNav decal_R" href="Farmes.php?idW='.$key['idArme'].'">'.$key['nomArme'].'</a>';
+      echo '<a class="lienNav decal_R MAJ" href="Farmes.php?idW='.$key['idArme'].'">'.$key['nomArme'].'</a>';
     }
   }
   ?>
@@ -51,7 +51,7 @@ ORDER BY `nomArme` ASC";
       echo 'Pas d\'élément dans cette catégorie.';
     } else {
       foreach ($dataSort as $key) {
-        echo '<a class="lienNav decal_R" href="Farmes.php?idW='.$key['idArme'].'">'.$key['nomArme'].'</a>';
+        echo '<a class="lienNav decal_R MAJ" href="Farmes.php?idW='.$key['idArme'].'">'.$key['nomArme'].'</a>';
       }
     }
     ?>
@@ -64,7 +64,7 @@ ORDER BY `nomArme` ASC";
     echo 'Pas d\'élément dans cette catégorie.';
   } else {
     foreach ($dataArmesU as $key) {
-      echo '<a class="lienNav decal_R" href="Farmes.php?idW='.$key['idArme'].'">'.$key['nomArme'].'</a>';
+      echo '<a class="lienNav decal_R MAJ" href="Farmes.php?idW='.$key['idArme'].'">'.$key['nomArme'].'</a>';
     }
   }
   ?>

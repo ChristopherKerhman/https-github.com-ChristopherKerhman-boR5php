@@ -12,6 +12,7 @@ include '../../stockage/pointDeVie.php';
 // Fin Tableau
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $id = filter($_POST['idUnite']);
+  $faction = filter($_POST['idFaction']);
   $nomFigurine = filter($_POST['nomFigurine']);
   $Description = filter_Texte($_POST['Description']);
   $DC = filter($_POST['DC']);
@@ -30,7 +31,7 @@ $valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $t
     $niveauMage = filter($_POST['niveauMage']);
     $valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $typeFigurine[$taille]['prix'] + $typeTroupe[$typeF]['prix'] + $niveauMage) * ($pointDeVie + 2)) * $sauvegarde[$svg]['prix'];
     $requetteSQL = "UPDATE `unites` SET `nomFigurine`= :nomFigurine,`Description`= :Description,`typeTroupe`=:typeTroupe,`taille`= :taille,`niveauMage`=:niveauMage,`deplacement`=:deplacement,
-    `course`=:course,`vol`=:vol,`station`=:station,`DQM`=:DQM,`DC`=:DC,`sauvegarde`=:sauvegarde,`pointDeVie`=:pdv,`valeurUnite`=:valeur
+    `course`=:course,`vol`=:vol,`station`=:station,`DQM`=:DQM,`DC`=:DC,`sauvegarde`=:sauvegarde,`pointDeVie`=:pdv,`valeurUnite`=:valeur, `id_faction` = :idFaction
     WHERE `idUnite`=:id;
     DELETE FROM `unite_armes` WHERE `id_unite` = :id";
     include '../readDB.php';
@@ -38,11 +39,12 @@ $valeur = (($typeDe[$DC]['prix'] + $typeDe[$DQM]['prix'] + $valeurMouvement + $t
   } else {
     // Si l'unité n'est pas un mage
     $requetteSQL = "UPDATE `unites` SET `nomFigurine`= :nomFigurine,`Description`= :Description,`typeTroupe`=:typeTroupe,`taille`= :taille,`deplacement`=:deplacement,
-    `course`=:course,`vol`=:vol,`station`=:station,`DQM`=:DQM,`DC`=:DC,`sauvegarde`=:sauvegarde,`pointDeVie`=:pdv,`valeurUnite`=:valeur
+    `course`=:course,`vol`=:vol,`station`=:station,`DQM`=:DQM,`DC`=:DC,`sauvegarde`=:sauvegarde,`pointDeVie`=:pdv,`valeurUnite`=:valeur, `id_faction` = :idFaction
     WHERE `idUnite`=:id;
     DELETE FROM `unite_armes` WHERE `id_unite` = :id";
       include '../readDB.php';
   }
+  $data->bindParam(':idFaction', $faction);
   $data->bindParam(':id', $id);
   $data->bindParam(':nomFigurine', $nomFigurine);
   $data->bindParam(':Description', $Description);

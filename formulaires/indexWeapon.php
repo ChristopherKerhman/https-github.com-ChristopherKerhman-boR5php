@@ -2,7 +2,7 @@
 <h3>Les armes créer sur R5 et disponible dans les listes</h3>
   <?php
   // Paramètre de limite
-  $limit = 6;
+  $limit = 10;
 function filter($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -61,7 +61,7 @@ $requetteSQL = "SELECT `idArme`, `nomArme`, `nomUnivers` FROM `armes`
           echo $listeWeapon[$limit - 1]['idArme'];
        }
         ?>">
-       <button class="buttonGestionLore" type="submit" name="button">+10 <i class="fas fa-arrow-right"></i></button>
+       <button class="buttonGestionLore" type="submit" name="button"><?php echo $limit; ?> <i class="fas fa-arrow-right"></i></button>
   </form>
 
 </div>

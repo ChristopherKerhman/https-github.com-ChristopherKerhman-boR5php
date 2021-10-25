@@ -1,6 +1,8 @@
 <?php
 $autorisation = 1;
 include 'header.php';
+include 'gestionDB/read/factions.php';
+//$dataFaction
 ?>
 <section class="conteneur_col">
 <h3>Modifier l'unité</h3>
