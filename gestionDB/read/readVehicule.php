@@ -2,7 +2,7 @@
 $requetteSQL = "SELECT `idVehicule`, `id_proprietaire`, `id_faction`, `nomVehicule`, `descriptionVehicule`, `typeVehicule`, `mouvementVehicule`,
 `courseVehicule`, `vol`, `stationnaire`, `equipage`, `passager`, `DQM`, `DC`, `svg`, `pointStructure`, `valeur`, `fixer`, `valide`
 FROM `vehicule`
-WHERE `id_faction` = :id";
+WHERE `id_faction` = :id ORDER BY `nomVehicule`";
 $data = $conn->prepare($requetteSQL);
 $data->bindParam(':id', $id_faction);
 $data->execute();

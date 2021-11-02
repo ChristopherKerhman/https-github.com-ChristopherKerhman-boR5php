@@ -9,7 +9,7 @@ if (empty($dataVehicule)) {
 } else {
   echo " <table>
      <tr>
-       <th>ID</th>
+       <th>Cloner</th>
        <th>Nom</th>
       <th>Decription</th>
        <th>Type</th>
@@ -32,7 +32,7 @@ if (empty($dataVehicule)) {
 foreach ($dataVehicule as $key) {
   echo
   '<tr>
-  <td>'.$key['idVehicule'].'</td>
+  <td><a class="lienNav" href="clonerVehicule.php?id='.$key['idVehicule'].'"><i class="fas fa-copy"></i></a></td>
   <td>'.$key['nomVehicule'].'</td>
   <td><a class="lienInfo" title="'.$key['descriptionVehicule'].'">  En savoir plus ?</a></td>
   <td>'.$typeVehicule[$key['typeVehicule']]['type'].'</td>

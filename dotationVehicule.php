@@ -8,7 +8,7 @@ include 'header.php';
   <?php
 $id = $_GET['id'];
   include 'gestionDB/read/monoVehicule.php';
-  // data sortie : $dataOneU
+  // data sortie : $dataOneV
   include 'affichages/oneVehicule.php';
   $search = $dataOneV[0]['id_faction'];
 // On va trier les arme pour les véhicules

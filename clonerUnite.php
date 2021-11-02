@@ -1,8 +1,6 @@
 <?php
 $autorisation = 1;
 include 'header.php';
-include 'gestionDB/read/factions.php';
-//$dataFaction
 ?>
 <section class="conteneur_col">
 <?php
@@ -32,7 +30,7 @@ include 'stockage/typeTroupe.php';
   <li><strong>Point de vie:</strong>'.$pdv[$dataOneU[0]['pointDeVie']]['pdv'].' Point de vie <strong>Sauvegarde:</strong>'.$sauvegarde[$dataOneU[0]['sauvegarde']]['Type'].'</li>
   <li><strong>Valeur:</strong> '.$dataOneU[0]['valeurUnite'].'</li>
   </ul>
-  <p class="paragrapheVehicule"><strong>Description :</strong><br />'.$dataOneU[0]['Description'].'</p>';
+  <p class="paragrapheVehicule"><strong>Description :</strong><br />'.$dataOneU[0]['Description'].'</p></div>';
   //print_r($dataOneU);
 }
   else {
