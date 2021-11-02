@@ -7,6 +7,7 @@ if (empty($dataUnite)) {
 } else {
   echo '<table>
     <tr>
+      <th>Cloner</th>
       <th>Nom</th>
       <th>Description</th>
       <th>Dé de combat</th>
@@ -28,6 +29,7 @@ if (empty($dataUnite)) {
     </tr>';
 foreach ($dataUnite as $key) {
   echo '<tr>
+    <td><a class="lienNav" href="clonerUnite.php?id='.$key['idUnite'].'"><i class="fas fa-copy"></i></a></td>
     <td>'.$key['nomFigurine'].'</td>
     <td><a class="lienInfo" title="'.$key['Description'].'">  En savoir plus ?</a></td>
     <td>'.$typeDe[$key['DC']]['de'].'</td>
