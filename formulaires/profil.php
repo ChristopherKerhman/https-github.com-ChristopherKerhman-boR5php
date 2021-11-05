@@ -58,4 +58,17 @@ include 'stockage/brassageDate.php';
     <br />
   <button class="classique" type="submit" name="button">Mettre à jour</button>
 </form>
+<form action="gestionDB/edit/darkMode.php" method="post">
+<?php
+if ($_SESSION['darkMode'] == 1) {
+  echo '<input type="hidden" name="darkMode" value="0">';
+  $ok = 'Off';
+} else {
+  echo '<input type="hidden" name="darkMode" value="1">';
+  $ok = 'On';
+}
+  ?>
+  <button class="classique" type="submit" name="button">Dark mode <?=$ok?></button>
+</form>
+
 <?php include 'composantVueJS/verrou.php';  ?>

@@ -24,7 +24,6 @@ include 'gestionDB/read/adminProfilUser.php';
       <li><strong>Prenom :</strong> <?php echo $dataProfil[0]['prenom']; ?> - <strong>Nom :</strong> <?php echo $dataProfil[0]['nom']; ?> - <strong>Tiper :</strong> <?php echo $yes[$dataProfil[0]['tiper']]['texte']; ?> </li>
       <li><strong>Date d'inscription :</strong> <?php echo brassageDate($dataProfil[0]['dateInscription']); ?>  </li>
       <li><strong>Email de sécurité : </strong><a class="lienNav" href="mailto:<?php echo $dataProfil[0]['emailUSer']; ?>"><?php echo $dataProfil[0]['emailUSer']; ?></a></li>
-      <li><strong>A propos de <?php echo $dataProfil[0]['login']; ?></strong><br /><p class="paragraphe"><?php if(!empty( $dataProfil[0]['description'])){ echo  $dataProfil[0]['description'];} else { echo 'Pas de données'; } ?></p></li>
       <li><strong>Univers encore à créer :</strong> <?php echo $dataProfil[0]['createur']; ?></li>
       <li><strong>Nombre d'univers créer :</strong> <?php echo $dataNRBU[0]['totalU']; ?> </li>
       <li><strong>Accepter la RGPD :</strong> <?php echo $yes[$dataProfil[0]['consentementUser']]['texte']; ?> </li>

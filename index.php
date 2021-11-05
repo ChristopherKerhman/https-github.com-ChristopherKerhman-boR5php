@@ -55,6 +55,23 @@ include 'header.php';
     <li><strong>Nombre de vehicule créer et fixer :</strong> <?php echo $nbrVehicule[0]['totalVehicule']; ?> Véhicules</li>
     <li><strong>Nombre de liste partagé :</strong> <?php echo $nbrListe[0]['totalListe']; ?> Listes</li>
   </ul>
+  <p>
+    style du site : <form action="run.php" method="post">
+    <?php
+    if (empty($_SESSION['darkMode'])){
+      $_SESSION['darkMode'] = 1;
+    }
+    if ($_SESSION['darkMode'] == 1) {
+      echo '<input type="hidden" name="darkMode" value="0">';
+      $ok = 'Off';
+    } else {
+      echo '<input type="hidden" name="darkMode" value="1">';
+      $ok = 'On';
+    }
+      ?>
+      <button class="classique" type="submit" name="button">Dark mode <?=$ok?></button>
+    </form>
+  </p>
   </article>
 </section>
 

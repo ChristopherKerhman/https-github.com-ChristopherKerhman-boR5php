@@ -15,5 +15,5 @@
   <div id="content">
   <header class="conteneur_col">
     <?php echo '<h1>'.$titre.'</h1><h2>'.$slogan.'</h2>'; ?>
-    <?php include 'affichages/menuNavigation.php'; ?>
+    <?php include 'affichages/menuNavigation.php';?>
   </header>

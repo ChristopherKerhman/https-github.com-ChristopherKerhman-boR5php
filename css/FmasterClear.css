@@ -25,7 +25,6 @@
 html, body {
 height: 100vh;
 }
-
 /*==Front==*/
 .conteneur_Wrap {
   display: flex;
@@ -57,7 +56,7 @@ height: 100vh;
 
 /*==Fin Front==*/
 
-body {
+/*body {
   color: #2e3134;
   align-items: center;
   text-align: -webkit-center;
@@ -78,6 +77,16 @@ background: #626262;
     background-repeat: round;
   min-height: 100%;
   background-size:50px 50px;
+}*/
+body {
+  color: #2e3134;
+  align-items: center;
+  text-align: -webkit-center;
+  max-width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background: #c6c6c6;
 }
 
 .basDePage {

@@ -9,12 +9,8 @@ $data->execute();
 $data->setFetchMode(PDO::FETCH_ASSOC);
 $dataUser = $data->fetchAll();
 //print_r($dataUser);
-?>
-<section>
-  <?php
     $arrayLogin = [];
     $arrayScore = [];
-
   foreach ($dataUser as $key) {
     $score = 0;
     if ($key['tiper'] == 1) {
@@ -88,6 +84,7 @@ $dataUser = $data->fetchAll();
 $tableau = array_combine($arrayLogin, $arrayScore);
 //print_r($tableau);
    ?>
+<section class="conteneur_col">
 <table>
   <caption>
     <strong class="famous">Le tableau des meilleurs créateurs</strong>

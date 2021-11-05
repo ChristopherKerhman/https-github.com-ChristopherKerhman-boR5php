@@ -62,7 +62,7 @@ $requetteSQL = "SELECT * FROM `journaux` ORDER BY `idConnexion` DESC LIMIT {$pre
        $date = $key['dateheurConnexion'];
        echo '<tr>
               <td>'.$key['idConnexion'].'</td>
-              <td>'.$key['login'].'</td>
+              <td><a class="lienNav" href="FicheUser.php?idUser='.$key['idUser'].'">'.$key['login'].'</a></td>
               <td>'.$key['ip_client'].'</td>
               <td>'.$key['idUser'].'</td>
               <td>'.brassageDate($date).' - heure = '.substr($date,10,6).'</td>
